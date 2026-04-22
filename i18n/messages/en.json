@@ -25,5 +25,14 @@
     "email": "Email",
     "wechat": "WeChat",
     "rights": "All rights reserved"
+  },
+  "home": {
+    "matrixTitle": "Product matrix",
+    "matrixSubtitle": "Three product lines for teams and developers in different contexts.",
+    "themes": {
+      "collaboration": "① Enterprise collaboration & productivity",
+      "ai-dev": "② AI & developer tools",
+      "vertical-ai": "③ Vertical AI products"
+    }
   }
 }

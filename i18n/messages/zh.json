@@ -25,5 +25,14 @@
     "email": "邮箱",
     "wechat": "微信",
     "rights": "保留所有权利"
+  },
+  "home": {
+    "matrixTitle": "产品矩阵",
+    "matrixSubtitle": "三条产品线，服务不同场景下的团队与开发者",
+    "themes": {
+      "collaboration": "① 企业协作与生产力",
+      "ai-dev": "② AI 与开发者工具",
+      "vertical-ai": "③ 面向行业的 AI 产品"
+    }
   }
 }
