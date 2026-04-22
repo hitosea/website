@@ -33,6 +33,19 @@
       "collaboration": "① 企业协作与生产力",
       "ai-dev": "② AI 与开发者工具",
       "vertical-ai": "③ 面向行业的 AI 产品"
+    },
+    "hero": {
+      "eyebrow": "开源 · 产品矩阵 · 企业级",
+      "titleLine1": "我们构建开源的",
+      "titleLine2": "生产力、AI 与开发者工具",
+      "lede": "海豚有海是一家 Developer-first 的开源产品公司。我们的产品被数千个团队和开发者信赖使用。",
+      "primaryCta": "预约演示",
+      "secondaryCta": "浏览产品矩阵"
     }
+  },
+  "stats": {
+    "stars": "GitHub ★",
+    "repos": "开源项目",
+    "contributors": "贡献者"
   }
 }

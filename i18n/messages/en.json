@@ -33,6 +33,19 @@
       "collaboration": "① Enterprise collaboration & productivity",
       "ai-dev": "② AI & developer tools",
       "vertical-ai": "③ Vertical AI products"
+    },
+    "hero": {
+      "eyebrow": "Open source · Product suite · Enterprise-ready",
+      "titleLine1": "We build open-source tools for",
+      "titleLine2": "productivity, AI, and developers.",
+      "lede": "Hitosea is a developer-first open-source product company. Our products are trusted by thousands of teams and developers.",
+      "primaryCta": "Book a demo",
+      "secondaryCta": "Explore our products"
     }
+  },
+  "stats": {
+    "stars": "GitHub ★",
+    "repos": "Open-source projects",
+    "contributors": "Contributors"
   }
 }
