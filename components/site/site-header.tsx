@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Link as IntlLink } from '@/i18n/routing'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
@@ -6,7 +7,6 @@ import { getTranslations } from 'next-intl/server'
 import { LanguageSwitch } from './language-switch'
 import { ThemeToggle } from './theme-toggle'
 import { WeChatPopover } from './wechat-popover'
-import { SITE } from '@/lib/constants'
 
 export async function SiteHeader() {
   const t = await getTranslations('nav')
@@ -15,11 +15,23 @@ export async function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur">
       <div className="container flex h-16 items-center justify-between gap-6">
-        <IntlLink href="/" className="flex items-center gap-2 font-semibold">
-          <span className="text-lg">{SITE.nameZh}</span>
-          <span className="hidden text-sm text-muted-foreground md:inline">
-            {SITE.name}
-          </span>
+        <IntlLink href="/" className="flex items-center">
+          <Image
+            src="/brand/logo-white.png"
+            alt="Hitosea"
+            width={120}
+            height={32}
+            className="hidden h-7 w-auto dark:block"
+            priority
+          />
+          <Image
+            src="/brand/logo-black.png"
+            alt="Hitosea"
+            width={120}
+            height={32}
+            className="block h-7 w-auto dark:hidden"
+            priority
+          />
         </IntlLink>
 
         <nav className="hidden items-center gap-6 text-sm md:flex">

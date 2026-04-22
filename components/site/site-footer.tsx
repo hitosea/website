@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Link as IntlLink } from '@/i18n/routing'
 import { getTranslations, getLocale } from 'next-intl/server'
 import { products } from '@/content/products'
@@ -15,8 +16,20 @@ export async function SiteFooter() {
       <div className="container py-12">
         <div className="grid gap-8 md:grid-cols-4">
           <div>
-            <p className="text-lg font-semibold">{SITE.nameZh}</p>
-            <p className="mt-1 text-sm text-muted-foreground">{SITE.name}</p>
+            <Image
+              src="/brand/logo-white.png"
+              alt="Hitosea"
+              width={100}
+              height={28}
+              className="hidden h-6 w-auto dark:block"
+            />
+            <Image
+              src="/brand/logo-black.png"
+              alt="Hitosea"
+              width={100}
+              height={28}
+              className="block h-6 w-auto dark:hidden"
+            />
             <p className="mt-3 text-sm text-muted-foreground">{t('tagline')}</p>
           </div>
 
