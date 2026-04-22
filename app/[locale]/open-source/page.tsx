@@ -3,6 +3,8 @@ import { useTranslations } from 'next-intl'
 import { OpenSourceStats } from '@/components/site/open-source-stats'
 import { OpenSourceProjectList } from '@/components/site/open-source-project-list'
 
+export const metadata = { title: 'Open Source' }
+
 export default function OpenSourcePage() {
   return (
     <main>

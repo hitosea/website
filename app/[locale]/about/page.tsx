@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button'
 import { ProductTimeline } from '@/components/site/product-timeline'
 import { SITE } from '@/lib/constants'
 
+export const metadata = { title: 'About' }
+
 export default function AboutPage() {
   const t = useTranslations('about')
 

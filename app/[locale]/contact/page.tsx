@@ -3,6 +3,8 @@ import { useTranslations } from 'next-intl'
 import { ContactForm } from '@/components/site/contact-form'
 import { SITE } from '@/lib/constants'
 
+export const metadata = { title: 'Contact' }
+
 export default function ContactPage() {
   const t = useTranslations('contact')
 
