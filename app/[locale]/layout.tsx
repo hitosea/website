@@ -6,6 +6,7 @@ import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import { ThemeProvider } from '@/components/theme-provider'
+import { SiteHeader } from '@/components/site/site-header'
 import '../globals.css'
 
 const inter = Inter({
@@ -33,10 +34,11 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning className={`${inter.variable} ${GeistMono.variable}`}>
-      <body className="min-h-screen bg-background text-foreground antialiased">
+      <body className="flex flex-col min-h-screen bg-background text-foreground antialiased">
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
-            {children}
+            <SiteHeader />
+            <div className="flex-1">{children}</div>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

@@ -2,7 +2,9 @@
   "common": {
     "bookDemo": "Book a demo",
     "contact": "Contact",
-    "language": "Language"
+    "language": "Language",
+    "wechatTitle": "Add on WeChat",
+    "wechatHint": "Weekdays 9:00–18:00"
   },
   "nav": {
     "products": "Products",

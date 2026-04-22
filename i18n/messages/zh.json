@@ -2,7 +2,9 @@
   "common": {
     "bookDemo": "预约演示",
     "contact": "联系",
-    "language": "语言"
+    "language": "语言",
+    "wechatTitle": "添加微信",
+    "wechatHint": "工作日 9:00-18:00"
   },
   "nav": {
     "products": "产品",
