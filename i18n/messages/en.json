@@ -80,5 +80,15 @@
     "stars": "GitHub ★",
     "repos": "Open-source projects",
     "contributors": "Contributors"
+  },
+  "openSource": {
+    "heroTitle": "Open source is Hitosea's foundation",
+    "heroLede": "Our code, product roadmap, and issue tracking are all public. Join us — start by starring a repo.",
+    "projectsTitle": "Core open-source projects",
+    "communityTitle": "Join the community",
+    "communityGithub": "Discuss on GitHub Discussions, share best practices, propose ideas",
+    "communityWeChat": "WeChat group (add our bot to request an invite)",
+    "contributeTitle": "Contribute",
+    "contributeDesc": "Each repo includes a CONTRIBUTING.md with issue, development, and PR instructions."
   }
 }

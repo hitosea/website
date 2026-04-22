@@ -80,5 +80,15 @@
     "stars": "GitHub ★",
     "repos": "开源项目",
     "contributors": "贡献者"
+  },
+  "openSource": {
+    "heroTitle": "开源是海豚有海的根基",
+    "heroLede": "我们的代码、产品路线、issue 跟踪全部公开。参与我们，从 star 一个仓库开始。",
+    "projectsTitle": "核心开源项目",
+    "communityTitle": "加入社区",
+    "communityGithub": "GitHub Discussions 讨论最佳实践、提建议",
+    "communityWeChat": "微信群（添加小助手邀请入群）",
+    "contributeTitle": "参与贡献",
+    "contributeDesc": "每个仓库都有 CONTRIBUTING.md，说明如何提 issue、开发、提 PR。"
   }
 }
