@@ -1,0 +1,134 @@
+{
+  "common": {
+    "bookDemo": "预约演示",
+    "contact": "联系",
+    "language": "语言",
+    "wechatTitle": "添加微信",
+    "wechatHint": "工作日 9:00-18:00"
+  },
+  "nav": {
+    "products": "产品",
+    "openSource": "开源",
+    "about": "关于"
+  },
+  "footer": {
+    "tagline": "Developer-first 的开源产品公司",
+    "products": "产品",
+    "company": "公司",
+    "openSourceCol": "开源",
+    "contactCol": "联系",
+    "about": "关于我们",
+    "joinUs": "加入我们",
+    "contact": "联系我们",
+    "github": "GitHub 组织",
+    "contribute": "贡献指南",
+    "email": "邮箱",
+    "wechat": "微信",
+    "rights": "保留所有权利"
+  },
+  "home": {
+    "matrixTitle": "产品矩阵",
+    "matrixSubtitle": "三条产品线，服务不同场景下的团队与开发者",
+    "themes": {
+      "collaboration": "① 企业协作与生产力",
+      "ai-dev": "② AI 与开发者工具",
+      "vertical-ai": "③ 面向行业的 AI 产品"
+    },
+    "hero": {
+      "eyebrow": "开源 · 产品矩阵 · 企业级",
+      "titleLine1": "我们构建开源的",
+      "titleLine2": "生产力、AI 与开发者工具",
+      "lede": "海豚有海是一家 Developer-first 的开源产品公司。我们的产品被数千个团队和开发者信赖使用。",
+      "primaryCta": "预约演示",
+      "secondaryCta": "浏览产品矩阵"
+    },
+    "opensource": {
+      "title": "我们相信开源",
+      "lede": "海豚有海的所有核心产品都开源。从 DooTask 到 MenuRay，我们相信可审计、可自部署、可定制的软件是企业未来的基础。",
+      "viewProjects": "查看开源项目",
+      "viewGithub": "前往 GitHub 组织"
+    },
+    "whyUs": {
+      "title": "为什么选海豚有海",
+      "items": {
+        "openSource": {
+          "title": "全线开源",
+          "desc": "所有核心产品开源，可审计、可自部署、可定制。"
+        },
+        "enterprise": {
+          "title": "企业私有化",
+          "desc": "提供生产级私有化部署、安全合规支持和 SLA。"
+        },
+        "matrix": {
+          "title": "产品矩阵",
+          "desc": "从团队协作到 AI 工作空间到垂直 SaaS，一家公司满足多场景。"
+        },
+        "devFriendly": {
+          "title": "开发者友好",
+          "desc": "完整的开源文档、丰富的 API 和 SDK、活跃的社区。"
+        }
+      }
+    },
+    "cta": {
+      "title": "准备为你的团队接入海豚有海的产品了吗？",
+      "primary": "预约演示",
+      "secondary": "加微信聊聊",
+      "emailHint": "或直接发邮件："
+    }
+  },
+  "stats": {
+    "stars": "GitHub ★",
+    "repos": "开源项目",
+    "contributors": "贡献者"
+  },
+  "openSource": {
+    "heroTitle": "开源是海豚有海的根基",
+    "heroLede": "我们的代码、产品路线、issue 跟踪全部公开。参与我们，从 star 一个仓库开始。",
+    "projectsTitle": "核心开源项目",
+    "communityTitle": "加入社区",
+    "communityGithub": "GitHub Discussions 讨论最佳实践、提建议",
+    "communityWeChat": "微信群（添加小助手邀请入群）",
+    "contributeTitle": "参与贡献",
+    "contributeDesc": "每个仓库都有 CONTRIBUTING.md，说明如何提 issue、开发、提 PR。"
+  },
+  "about": {
+    "heroTitle": "我们是海豚有海",
+    "heroLede": "一群相信开源可以改变企业软件的工程师。",
+    "missionTitle": "我们的使命",
+    "missionBody": "用开源、模块化的产品帮助团队把精力花在真正创造价值的事情上 —— 不是搭建基础设施，而是构建更好的产品、服务更多客户。",
+    "doTitle": "我们在做什么",
+    "doBody": "我们构建三条相互支撑的产品线：企业协作（以 DooTask 为核心）、AI 与开发者工具（Happy Next、eeui、DooPush），以及面向行业的 AI 产品（MenuRay、球见、TTPOS）。每一款产品都开源，可私有化部署，为企业级场景准备。",
+    "timelineTitle": "发展历程",
+    "joinTitle": "加入我们",
+    "joinBody": "如果你认同开源、热爱构建产品，我们想认识你。把简历发到：",
+    "joinCta": "发送简历"
+  },
+  "contact": {
+    "heroTitle": "预约演示 / 联系我们",
+    "heroLede": "想了解私有化部署、定制开发、或商务合作？留下联系方式，我们会在一个工作日内回复。",
+    "form": {
+      "name": "姓名",
+      "namePlaceholder": "你的姓名",
+      "company": "公司",
+      "companyPlaceholder": "公司名称",
+      "email": "邮箱",
+      "emailPlaceholder": "your@email.com",
+      "phone": "电话（可选）",
+      "phonePlaceholder": "+86 ...",
+      "products": "感兴趣的产品",
+      "productsPlaceholder": "可多选",
+      "message": "需求说明",
+      "messagePlaceholder": "团队规模、使用场景、希望何时部署等",
+      "submit": "提交",
+      "submitting": "提交中...",
+      "success": "已收到，我们会尽快联系你！",
+      "errorGeneric": "提交失败，请稍后重试或直接发邮件给我们。"
+    },
+    "otherTitle": "其他联系方式",
+    "otherEmail": "商务邮箱",
+    "otherWeChat": "微信",
+    "otherWeChatDesc": "工作日 9:00-18:00",
+    "otherAddress": "办公地点",
+    "otherAddressValue": "广西"
+  }
+}

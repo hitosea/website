@@ -1,0 +1,134 @@
+{
+  "common": {
+    "bookDemo": "Book a demo",
+    "contact": "Contact",
+    "language": "Language",
+    "wechatTitle": "Add on WeChat",
+    "wechatHint": "Weekdays 9:00–18:00"
+  },
+  "nav": {
+    "products": "Products",
+    "openSource": "Open Source",
+    "about": "About"
+  },
+  "footer": {
+    "tagline": "A developer-first open-source product company.",
+    "products": "Products",
+    "company": "Company",
+    "openSourceCol": "Open Source",
+    "contactCol": "Contact",
+    "about": "About",
+    "joinUs": "Join us",
+    "contact": "Contact",
+    "github": "GitHub org",
+    "contribute": "Contributing guide",
+    "email": "Email",
+    "wechat": "WeChat",
+    "rights": "All rights reserved"
+  },
+  "home": {
+    "matrixTitle": "Product matrix",
+    "matrixSubtitle": "Three product lines for teams and developers in different contexts.",
+    "themes": {
+      "collaboration": "① Enterprise collaboration & productivity",
+      "ai-dev": "② AI & developer tools",
+      "vertical-ai": "③ Vertical AI products"
+    },
+    "hero": {
+      "eyebrow": "Open source · Product suite · Enterprise-ready",
+      "titleLine1": "We build open-source tools for",
+      "titleLine2": "productivity, AI, and developers.",
+      "lede": "Hitosea is a developer-first open-source product company. Our products are trusted by thousands of teams and developers.",
+      "primaryCta": "Book a demo",
+      "secondaryCta": "Explore our products"
+    },
+    "opensource": {
+      "title": "We believe in open source",
+      "lede": "Every core product at Hitosea is open source. From DooTask to MenuRay, we believe auditable, self-hostable, customizable software is the future of enterprise software.",
+      "viewProjects": "View open-source projects",
+      "viewGithub": "Go to our GitHub org"
+    },
+    "whyUs": {
+      "title": "Why Hitosea",
+      "items": {
+        "openSource": {
+          "title": "Fully open-source",
+          "desc": "All our core products are open source — auditable, self-hostable, customizable."
+        },
+        "enterprise": {
+          "title": "Enterprise-ready",
+          "desc": "Production-grade self-hosted deployments, compliance, and SLA support."
+        },
+        "matrix": {
+          "title": "Product suite",
+          "desc": "From team collaboration to AI workspace to vertical SaaS — one vendor, many scenarios."
+        },
+        "devFriendly": {
+          "title": "Developer-first",
+          "desc": "Solid open-source docs, rich APIs and SDKs, active community."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to bring Hitosea products to your team?",
+      "primary": "Book a demo",
+      "secondary": "Chat on WeChat",
+      "emailHint": "Or just email us:"
+    }
+  },
+  "stats": {
+    "stars": "GitHub ★",
+    "repos": "Open-source projects",
+    "contributors": "Contributors"
+  },
+  "openSource": {
+    "heroTitle": "Open source is Hitosea's foundation",
+    "heroLede": "Our code, product roadmap, and issue tracking are all public. Join us — start by starring a repo.",
+    "projectsTitle": "Core open-source projects",
+    "communityTitle": "Join the community",
+    "communityGithub": "Discuss on GitHub Discussions, share best practices, propose ideas",
+    "communityWeChat": "WeChat group (add our bot to request an invite)",
+    "contributeTitle": "Contribute",
+    "contributeDesc": "Each repo includes a CONTRIBUTING.md with issue, development, and PR instructions."
+  },
+  "about": {
+    "heroTitle": "We are Hitosea",
+    "heroLede": "A group of engineers who believe open source can change enterprise software.",
+    "missionTitle": "Our mission",
+    "missionBody": "Use open-source, modular products to help teams spend their energy on what truly creates value — not building infrastructure, but shipping better products and serving more customers.",
+    "doTitle": "What we're doing",
+    "doBody": "We build three product lines that reinforce each other: enterprise collaboration (centered on DooTask), AI & developer tools (Happy Next, eeui, DooPush), and vertical AI products (MenuRay, Qiujian, TTPOS). Every product is open-source, self-hostable, and enterprise-ready.",
+    "timelineTitle": "Timeline",
+    "joinTitle": "Join us",
+    "joinBody": "If you believe in open source and love shipping products, we'd like to meet you. Send your résumé to:",
+    "joinCta": "Send résumé"
+  },
+  "contact": {
+    "heroTitle": "Book a demo / Contact us",
+    "heroLede": "Want to explore self-hosted deployment, custom development, or partnerships? Leave your info and we'll get back within one business day.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "company": "Company",
+      "companyPlaceholder": "Company name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone (optional)",
+      "phonePlaceholder": "+1 ...",
+      "products": "Products of interest",
+      "productsPlaceholder": "Select one or more",
+      "message": "Your needs",
+      "messagePlaceholder": "Team size, use cases, target deployment timeline, etc.",
+      "submit": "Submit",
+      "submitting": "Submitting…",
+      "success": "Got it — we'll reach out soon!",
+      "errorGeneric": "Submission failed. Please retry or email us directly."
+    },
+    "otherTitle": "Other ways to reach us",
+    "otherEmail": "Business email",
+    "otherWeChat": "WeChat",
+    "otherWeChatDesc": "Weekdays 9:00–18:00",
+    "otherAddress": "Office",
+    "otherAddressValue": "Guangxi, China"
+  }
+}
