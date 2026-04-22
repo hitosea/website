@@ -24,7 +24,7 @@ export function Hero() {
         <h1
           className={`font-serif font-normal leading-[1.08] tracking-[-0.03em] mb-8 md:mb-10 text-balance ${
             locale === 'zh'
-              ? 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl'
+              ? 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[88px]'
               : 'text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[112px] leading-[1.0] tracking-[-0.04em]'
           }`}
           style={{ fontVariationSettings: '"opsz" 144, "SOFT" 30' }}
