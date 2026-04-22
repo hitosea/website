@@ -2,65 +2,88 @@ import { Suspense } from 'react'
 import { Link as IntlLink } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
 import { ArrowRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { StatsStrip } from './stats-strip'
+import { HeroStats } from './hero-stats'
+import { HeroIndexCard } from './hero-index-card'
 
 export function Hero() {
   const t = useTranslations('home.hero')
 
   return (
-    <section className="relative overflow-hidden">
-      {/* Ambient glow orbs */}
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-40 top-0 h-[600px] w-[600px] rounded-full bg-primary/20 blur-[160px]" />
-        <div className="absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-purple-500/15 blur-[140px]" />
-        <div className="absolute bottom-0 left-1/3 h-[400px] w-[400px] rounded-full bg-pink-500/10 blur-[120px]" />
-      </div>
-
-      {/* Grid pattern overlay */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: 'linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)',
-          backgroundSize: '64px 64px',
-        }}
-      />
-
-      <div className="container relative py-28 md:py-40 lg:py-48">
-        <p className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-primary">
-          <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-          {t('eyebrow')}
-        </p>
-
-        <h1 className="max-w-5xl text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl xl:text-8xl">
-          <span className="text-muted-foreground/80">{t('titleLine1')}</span>
-          <br />
-          <span className="text-gradient">{t('titleLine2')}</span>
-        </h1>
-
-        <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-          {t('lede')}
-        </p>
-
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Button asChild size="lg" className="glow-primary px-8 text-base">
-            <IntlLink href="/contact">
-              {t('primaryCta')} <ArrowRight className="ml-2 h-4 w-4" />
-            </IntlLink>
-          </Button>
-          <Button asChild size="lg" variant="outline" className="px-8 text-base border-border/60 hover:border-primary/40">
-            <IntlLink href="/#products">{t('secondaryCta')}</IntlLink>
-          </Button>
+    <section className="relative py-16 md:py-20">
+      <div className="container">
+        {/* Top bar: Issue line + dateline */}
+        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between border-b border-rule pb-4 mb-10 md:mb-12 font-mono text-xs tracking-widest uppercase text-mute">
+          <div className="text-ember">{t('issueLine')}</div>
+          <div className="mt-1 sm:mt-0">
+            {t('dateline')} · <span className="text-foreground">{t('datelineCity')}</span>
+          </div>
         </div>
 
-        <Suspense fallback={<div className="mt-14 h-16" />}>
-          <StatsStrip />
+        {/* Hero title — large Fraunces display */}
+        <h1 className="font-serif font-normal text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[112px] leading-[1.0] tracking-[-0.04em] mb-8 md:mb-10 text-balance" style={{ fontVariationSettings: '"opsz" 144, "SOFT" 30' }}>
+          {t('titleLine1')}
+          <em className="not-italic text-ember" style={{ fontVariationSettings: '"opsz" 144, "SOFT" 80' }}>
+            {t('titleAccent1')}
+          </em>
+          <br className="hidden md:block" />
+          {t('titleLine2')}
+          <span className="italic text-ochre" style={{ fontVariationSettings: '"opsz" 144, "SOFT" 100' }}>
+            {t('titleAmp')}
+          </span>
+          {t('titleLine3')}
+          <em className="not-italic text-ember" style={{ fontVariationSettings: '"opsz" 144, "SOFT" 80' }}>
+            {t('titleAccent2')}
+          </em>
+          {t('titleEnd')}
+        </h1>
+
+        {/* Two-column: left = dropcap + CTAs, right = index card */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_460px] gap-10 lg:gap-20 items-end">
+          <div>
+            <p className="dropcap text-base md:text-lg leading-relaxed text-foreground/85 max-w-[640px]">
+              {t('lede')}
+            </p>
+            <div className="flex flex-wrap gap-4 mt-8">
+              <IntlLink
+                href="/contact"
+                className="btn-editorial btn-editorial-primary btn-editorial-lg inline-flex items-center gap-2.5"
+              >
+                {t('primaryCta')}
+                <ArrowRight className="h-3.5 w-3.5" />
+              </IntlLink>
+              <IntlLink
+                href="/#products"
+                className="btn-editorial btn-editorial-ghost btn-editorial-lg"
+              >
+                {t('secondaryCta')}
+              </IntlLink>
+            </div>
+          </div>
+
+          {/* Index card — hidden on small screens */}
+          <aside className="hidden md:block">
+            <Suspense fallback={<IndexCardSkeleton />}>
+              <HeroIndexCard />
+            </Suspense>
+          </aside>
+        </div>
+
+        {/* Big stats bar */}
+        <Suspense fallback={<div className="mt-20 h-32 border-t border-b border-rule" />}>
+          <HeroStats />
         </Suspense>
       </div>
-
-      {/* Bottom fade to next section */}
-      <div aria-hidden className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
+  )
+}
+
+function IndexCardSkeleton() {
+  return (
+    <div className="border border-rule animate-pulse">
+      <div className="h-10 bg-[rgba(229,106,63,0.08)] border-b border-rule" />
+      {Array.from({ length: 8 }).map((_, i) => (
+        <div key={i} className="h-10 border-b border-dashed border-rule" />
+      ))}
+    </div>
   )
 }

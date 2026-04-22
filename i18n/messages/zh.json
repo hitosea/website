@@ -20,66 +20,143 @@
     "about": "关于我们",
     "joinUs": "加入我们",
     "contact": "联系我们",
-    "github": "GitHub 组织",
+    "github": "GitHub",
     "contribute": "贡献指南",
+    "roadmap": "路线图",
+    "changelog": "更新日志",
+    "security": "安全",
+    "pressKit": "媒体资源",
+    "brandGuide": "品牌指南",
+    "statusPage": "状态页",
+    "quarterly": "季刊",
     "email": "邮箱",
     "wechat": "微信",
-    "rights": "保留所有权利"
+    "rights": "保留所有权利",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "colophonLine1": "开源之洋季刊",
+    "colophonLine2": "字体 Fraunces & JetBrains Mono",
+    "colophonLine3": "创立于 2019",
+    "colophonTitle": "海豚有海 · 开源之洋季刊"
   },
   "home": {
-    "matrixTitle": "产品矩阵",
-    "matrixSubtitle": "三条产品线，服务不同场景下的团队与开发者",
+    "matrixTitle": "九款产品，三个方向，一个引擎。",
+    "matrixSubtitle": "我们将产品按三个方向分组 —— 覆盖现代工作的三个核心层 —— 由同一个平台团队持续打磨。",
+    "matrixSectionId": "§ 02 · 产品矩阵",
+    "matrixMeta": "09 款产品 · 03 个方向 · 01 个引擎",
     "themes": {
       "collaboration": "① 企业协作与生产力",
       "ai-dev": "② AI 与开发者工具",
       "vertical-ai": "③ 面向行业的 AI 产品"
     },
+    "groups": {
+      "collaboration": {
+        "num": "§ I",
+        "title": "为一起构建的团队而造。",
+        "titleAccent": "一起构建",
+        "sub": "可自部署的项目管理、任务追踪和 OKR 工具，让跨时区工作保持同步。"
+      },
+      "ai-dev": {
+        "num": "§ II",
+        "title": "为交付代码的人而造。",
+        "titleAccent": "交付代码",
+        "sub": "自主 IDE、跨平台运行时，以及面向开发者团队的交付基础设施。"
+      },
+      "vertical-ai": {
+        "num": "§ III",
+        "title": "为真实的、复杂的世界而造。",
+        "titleAccent": "真实",
+        "sub": "解决具体的、真实的人类问题的垂直 AI 产品 —— 而不是聊天机器人。"
+      }
+    },
     "hero": {
       "eyebrow": "开源 · 产品矩阵 · 企业级",
-      "titleLine1": "我们构建开源的",
-      "titleLine2": "生产力、AI 与开发者工具",
-      "lede": "海豚有海是一家 Developer-first 的开源产品公司。我们的产品被数千个团队和开发者信赖使用。",
+      "issueLine": "第 07 期 · 2026 年春",
+      "dateline": "开源之洋季刊",
+      "datelineCity": "上海",
+      "titleLine1": "我们构建",
+      "titleAccent1": "开源",
+      "titleLine2": "工具，为那些",
+      "titleAmp": "&",
+      "titleLine3": "创造、交付、",
+      "titleAccent2": "再次交付",
+      "titleEnd": "的人。",
+      "lede": "海豚有海是一间拥有十款产品、三个方向和一个执拗信念的工作室 —— 我们相信最持久的软件是与社区一起构建的。从团队协作到自主编码再到垂直 AI，我们的产品套件以开源为核心，以生产级为边界。",
       "primaryCta": "预约演示",
-      "secondaryCta": "浏览产品矩阵"
+      "secondaryCta": "浏览产品",
+      "indexTitle": "目录 · 本期内容",
+      "indexVersion": "v2026.04"
     },
     "opensource": {
+      "sectionId": "§ 03 · 开源之洋",
+      "sectionMeta": "许可证: MIT / Apache-2.0 · 2019 年起公开",
+      "stampLabel": "GitHub Star 总数 — 2026 年 4 月",
+      "stampDetail": "横跨 {repos}+ 个公开仓库 · {contributors}+ 位贡献者",
+      "stampBadgeTop": "10+ 仓库",
+      "stampBadgeBottom": "全部公开。",
+      "manifestoLabel": "宣言",
+      "manifestoTitle": "最好的软件是和社区一起建的，而不是藏在后面。",
+      "manifestoTitleAccent": "一起",
+      "manifestoP1": "海豚有海的每款产品都附带宽松许可证、公开路线图和持续的更新日志。当你选择海豚有海，你继承的不只是代码库 —— 还有一个每天都在审视它的社区。",
+      "manifestoP2": "我们对待 Pull Request 就像对待 Bug 报告一样：认真、快速、由真人工程师回复。没有守门人，没有企业版陷阱。",
+      "starOnGithub": "在 GitHub 点 Star",
+      "readChangelog": "阅读更新日志",
       "title": "我们相信开源",
       "lede": "海豚有海的所有核心产品都开源。从 DooTask 到 MenuRay，我们相信可审计、可自部署、可定制的软件是企业未来的基础。",
       "viewProjects": "查看开源项目",
       "viewGithub": "前往 GitHub 组织"
     },
     "whyUs": {
-      "title": "为什么选海豚有海",
+      "sectionId": "§ 04 · 为什么选择海豚有海",
+      "sectionMeta": "04 条原则 · 不可妥协",
+      "title": "四条我们绝不妥协的原则。",
+      "titleAccent": "绝不妥协",
+      "subtitle": "我们为一类特定的客户优化：重视透明度、可自部署和离开权利的工程驱动型团队。",
       "items": {
         "openSource": {
           "title": "全线开源",
-          "desc": "所有核心产品开源，可审计、可自部署、可定制。"
+          "titleAccent": "开源",
+          "desc": "每款产品都在 GitHub 以宽松许可证公开。Fork、审计、自部署 —— 无需许可，没有企业版陷阱。",
+          "roman": "I.",
+          "perf": "01"
         },
         "enterprise": {
-          "title": "企业私有化",
-          "desc": "提供生产级私有化部署、安全合规支持和 SLA。"
+          "title": "企业就绪",
+          "titleAccent": "就绪",
+          "desc": "SSO、审计日志和私有化部署从第一天就内置 —— 服务金融、政府和受监管行业，提供生产级默认配置。",
+          "roman": "II.",
+          "perf": "02"
         },
         "matrix": {
           "title": "产品矩阵",
-          "desc": "从团队协作到 AI 工作空间到垂直 SaaS，一家公司满足多场景。"
+          "titleAccent": "矩阵",
+          "desc": "九款产品，统一设计语言，统一身份层。先用一款 —— 准备好了再接入其余。无强制平台绑定。",
+          "roman": "III.",
+          "perf": "03"
         },
         "devFriendly": {
-          "title": "开发者友好",
-          "desc": "完整的开源文档、丰富的 API 和 SDK、活跃的社区。"
+          "title": "开发者优先",
+          "titleAccent": "优先",
+          "desc": "所有产品都有 API、CLI 和 Webhook。我们在 DX 上下功夫，让你的团队把时间花在交付上 —— 而不是配置供应商仪表盘。",
+          "roman": "IV.",
+          "perf": "04"
         }
       }
     },
     "cta": {
-      "title": "准备为你的团队接入海豚有海的产品了吗？",
+      "preLabel": "开始使用 · 无需邮箱即可浏览",
+      "title": "准备为你的团队接入海豚有海了吗？",
+      "titleAccent": "海豚有海",
       "primary": "预约演示",
-      "secondary": "加微信聊聊",
+      "secondary": "在 GitHub 查看",
       "emailHint": "或直接发邮件："
     }
   },
   "stats": {
-    "stars": "GitHub ★",
-    "repos": "开源项目",
-    "contributors": "贡献者"
+    "stars": "GitHub Stars",
+    "repos": "公开仓库",
+    "contributors": "贡献者",
+    "dockerPulls": "Docker 拉取"
   },
   "openSource": {
     "heroTitle": "开源是海豚有海的根基",

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { GeistMono } from 'geist/font/mono'
+import { Inter, Fraunces, JetBrains_Mono } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
@@ -15,6 +14,19 @@ import '../globals.css'
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
+  display: 'swap',
+})
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  display: 'swap',
+  axes: ['opsz', 'SOFT'],
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
   display: 'swap',
 })
 
@@ -70,13 +82,24 @@ export default async function LocaleLayout({
   const messages = await getMessages()
 
   return (
-    <html lang={locale} suppressHydrationWarning className={`${inter.variable} ${GeistMono.variable}`}>
+    <html
+      lang={locale}
+      suppressHydrationWarning
+      className={`${inter.variable} ${fraunces.variable} ${jetbrainsMono.variable}`}
+    >
       <body className="flex flex-col min-h-screen bg-background text-foreground antialiased">
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
-            <SiteHeader />
-            <div className="flex-1">{children}</div>
-            <SiteFooter />
+            {/* Page background glows */}
+            <div className="page-bg" aria-hidden />
+            {/* Scanline overlay */}
+            <div className="scanline-overlay" aria-hidden />
+            {/* Content shell */}
+            <div className="relative z-[1] flex flex-col min-h-screen">
+              <SiteHeader />
+              <div className="flex-1">{children}</div>
+              <SiteFooter />
+            </div>
             <Toaster position="top-center" richColors />
           </NextIntlClientProvider>
         </ThemeProvider>

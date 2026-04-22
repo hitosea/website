@@ -3,49 +3,79 @@
 @tailwind utilities;
 
 @layer base {
+  /* ---------- Light mode ---------- */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 199 89% 48%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 222 47% 11%;
+    --bg: #F3EEE4;
+    --paper: #0C0C0E;
+    --paper-2: #1D1F22;
+    --ink: #151719;
+    --ink-soft: #3A3D42;
+    --mute: #706A5F;
+    --rule: #D4CFC5;
+    --rule-soft: rgba(12,12,14,0.12);
+    --ember: #E56A3F;
+    --ember-deep: #B84A24;
+    --ochre: #E2B04A;
+    --teal: #7AB9A8;
+    --plum: #6B4E71;
+
+    --background: 40 30% 93%;
+    --foreground: 216 17% 8%;
+    --card: 40 30% 93%;
+    --card-foreground: 216 17% 8%;
+    --popover: 40 30% 91%;
+    --popover-foreground: 216 17% 8%;
+    --primary: 14 75% 57%;
+    --primary-foreground: 18 70% 7%;
+    --secondary: 40 20% 86%;
+    --secondary-foreground: 216 17% 8%;
+    --muted: 40 20% 86%;
+    --muted-foreground: 33 9% 40%;
+    --accent: 40 20% 86%;
+    --accent-foreground: 216 17% 8%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 199 89% 48%;
-    --radius: 0.75rem;
+    --border: 40 15% 82%;
+    --input: 40 15% 82%;
+    --ring: 14 75% 57%;
+    --radius: 0px;
   }
 
+  /* ---------- Dark mode (primary) ---------- */
   .dark {
-    --background: 222 59% 4%;
-    --foreground: 210 40% 98%;
-    --card: 222 47% 6%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222 47% 6%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 199 89% 48%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 217 33% 12%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 12%;
-    --muted-foreground: 215 20% 55%;
-    --accent: 217 33% 12%;
-    --accent-foreground: 210 40% 98%;
+    --bg: #0C0C0E;
+    --paper: #F3EEE4;
+    --paper-2: #EAE3D4;
+    --ink: #151719;
+    --ink-soft: #3A3D42;
+    --mute: #706A5F;
+    --rule: #1D1F22;
+    --rule-soft: rgba(243,238,228,0.12);
+    --ember: #E56A3F;
+    --ember-deep: #B84A24;
+    --ochre: #E2B04A;
+    --teal: #7AB9A8;
+    --plum: #6B4E71;
+
+    --background: 230 12% 5%;
+    --foreground: 37 30% 92%;
+    --card: 225 10% 7%;
+    --card-foreground: 37 30% 92%;
+    --popover: 225 10% 7%;
+    --popover-foreground: 37 30% 92%;
+    --primary: 14 75% 57%;
+    --primary-foreground: 18 70% 7%;
+    --secondary: 220 10% 11%;
+    --secondary-foreground: 37 30% 92%;
+    --muted: 220 10% 11%;
+    --muted-foreground: 33 9% 40%;
+    --accent: 220 10% 11%;
+    --accent-foreground: 37 30% 92%;
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 14%;
-    --input: 217 33% 14%;
-    --ring: 199 89% 48%;
+    --destructive-foreground: 37 30% 92%;
+    --border: 220 10% 12%;
+    --input: 220 10% 12%;
+    --ring: 14 75% 57%;
   }
 
   html {
@@ -55,38 +85,155 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: 'rlig' 1, 'calt' 1;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  /* ---------- Page background: radial glows ---------- */
+  .page-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .dark .page-bg {
+    background:
+      radial-gradient(1200px 600px at 85% -10%, rgba(229,106,63,0.12), transparent 60%),
+      radial-gradient(1000px 600px at 5% 30%, rgba(226,176,74,0.08), transparent 60%),
+      linear-gradient(180deg, #0C0C0E 0%, #0A0A0B 100%);
+  }
+  .page-bg:not(.dark .page-bg) {
+    background:
+      radial-gradient(1200px 600px at 85% -10%, rgba(229,106,63,0.06), transparent 60%),
+      radial-gradient(1000px 600px at 5% 30%, rgba(226,176,74,0.04), transparent 60%),
+      linear-gradient(180deg, #F3EEE4 0%, #EDE7D9 100%);
+  }
+
+  /* ---------- Scanline overlay ---------- */
+  .scanline-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    opacity: 0.5;
+  }
+  .dark .scanline-overlay {
+    background-image: repeating-linear-gradient(180deg, rgba(243,238,228,0.03) 0 1px, transparent 1px 3px);
+  }
+
+  /* ---------- Editorial buttons ---------- */
+  .btn-editorial {
+    @apply inline-flex items-center gap-2.5 font-semibold text-sm;
+    padding: 12px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform 0.15s, background 0.15s, color 0.15s;
+    border-radius: 0;
+  }
+  .btn-editorial-lg {
+    padding: 16px 26px;
+    font-size: 15px;
+  }
+  .btn-editorial-primary {
+    background: var(--ember);
+    color: #1a0b05;
+    border-color: var(--ember);
+    box-shadow: 4px 4px 0 var(--ember-deep);
+  }
+  .btn-editorial-primary:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ember-deep);
+  }
+  .btn-editorial-ghost {
+    background: transparent;
+    color: var(--paper);
+    border: 1px solid var(--paper);
+  }
+  .btn-editorial-ghost:hover {
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  /* ---------- Footer links ---------- */
+  .footer-link {
+    @apply text-sm no-underline;
+    color: var(--paper);
+    opacity: 0.78;
+    font-family: var(--font-serif), serif;
+    font-variation-settings: "opsz" 14;
+    transition: opacity 0.15s, color 0.15s;
+  }
+  .footer-link:hover {
+    opacity: 1;
+    color: var(--ember);
+  }
+
+  /* background utility for rule */
+  .bg-rule {
+    background-color: var(--rule);
   }
 }
 
 @layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, #a78bfa 50%, #f472b6 100%);
+  /* ---------- Magazine typography ---------- */
+  .font-serif-display {
+    font-family: var(--font-serif), 'Times New Roman', serif;
+    font-variation-settings: "opsz" 120, "SOFT" 50;
   }
 
-  .glow-primary {
-    box-shadow: 0 0 20px hsl(var(--primary) / 0.3), 0 0 60px hsl(var(--primary) / 0.1);
+  .font-serif-display-hero {
+    font-family: var(--font-serif), 'Times New Roman', serif;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
   }
 
-  .glow-primary-lg {
-    box-shadow: 0 0 30px hsl(var(--primary) / 0.4), 0 0 80px hsl(var(--primary) / 0.15);
+  .serif-italic-accent {
+    font-style: italic;
+    color: var(--ember);
+    font-variation-settings: "opsz" 144, "SOFT" 80;
   }
 
-  .border-glow {
-    border-color: hsl(var(--primary) / 0.3);
-    box-shadow: inset 0 0 20px hsl(var(--primary) / 0.05), 0 0 20px hsl(var(--primary) / 0.05);
+  .font-editorial-mono {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
-  .glass {
-    background: hsl(var(--card) / 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+  .text-ember { color: var(--ember); }
+  .text-ochre { color: var(--ochre); }
+  .text-teal { color: var(--teal); }
+  .text-plum { color: var(--plum); }
+  .text-paper { color: var(--paper); }
+  .text-mute { color: var(--mute); }
+  .bg-ember { background-color: var(--ember); }
+  .bg-ochre { background-color: var(--ochre); }
+  .bg-teal { background-color: var(--teal); }
+  .bg-plum { background-color: var(--plum); }
+  .border-rule { border-color: var(--rule); }
+  .border-rule-soft { border-color: var(--rule-soft); }
+
+  /* ---------- Section identifier ---------- */
+  .section-label {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 12px;
+    color: var(--ember);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
   }
 
-  .glass-strong {
-    background: hsl(var(--card) / 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+  /* ---------- Dropcap ---------- */
+  .dropcap::first-letter {
+    font-family: var(--font-serif), serif;
+    font-weight: 500;
+    font-variation-settings: "opsz" 144;
+    font-size: 56px;
+    float: left;
+    line-height: 0.85;
+    padding: 4px 10px 0 0;
+    color: var(--ember);
   }
 }
 

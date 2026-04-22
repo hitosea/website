@@ -8,118 +8,93 @@ export async function SiteFooter() {
   const t = await getTranslations('footer')
   const locale = await getLocale()
   const year = new Date().getFullYear()
-
   const productLinks = products.filter((p) => p.featured)
 
   return (
-    <footer className="mt-24 border-t border-border/40 bg-background">
-      <div className="container py-12">
-        <div className="grid gap-8 md:grid-cols-4">
-          <div>
+    <footer className="border-t-[3px] border-double border-rule py-16 md:py-20 bg-background">
+      <div className="container">
+        {/* Masthead header */}
+        <div className="flex flex-col md:flex-row md:items-baseline md:justify-between border-b border-rule pb-6 mb-10 gap-4">
+          <div className="flex items-center gap-4">
             <Image
               src="/brand/logo-white.png"
               alt="Hitosea"
-              width={100}
-              height={28}
-              className="hidden h-6 w-auto dark:block"
+              width={140}
+              height={40}
+              className="hidden h-10 w-auto dark:block"
             />
             <Image
               src="/brand/logo-black.png"
               alt="Hitosea"
-              width={100}
-              height={28}
-              className="block h-6 w-auto dark:hidden"
+              width={140}
+              height={40}
+              className="block h-10 w-auto dark:hidden"
             />
-            <p className="mt-3 text-sm text-muted-foreground">{t('tagline')}</p>
           </div>
-
-          <div>
-            <h4 className="mb-3 text-sm font-semibold">{t('products')}</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              {productLinks.map((p) => (
-                <li key={p.slug}>
-                  <a
-                    href={p.websiteUrl ?? p.githubUrl}
-                    className="hover:text-foreground"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    {locale === 'zh' ? p.nameZh : p.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="mb-3 text-sm font-semibold">{t('company')}</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <IntlLink href="/about" className="hover:text-foreground">
-                  {t('about')}
-                </IntlLink>
-              </li>
-              <li>
-                <a href={`mailto:${SITE.careersEmail}`} className="hover:text-foreground">
-                  {t('joinUs')}
-                </a>
-              </li>
-              <li>
-                <IntlLink href="/contact" className="hover:text-foreground">
-                  {t('contact')}
-                </IntlLink>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/hitosea"
-                  target="_blank"
-                  rel="noopener"
-                  className="hover:text-foreground"
-                >
-                  {t('github')}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="mb-3 text-sm font-semibold">{t('contactCol')}</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a href={`mailto:${SITE.email}`} className="hover:text-foreground">
-                  {SITE.email}
-                </a>
-              </li>
-            </ul>
+          <div className="font-mono text-[11px] text-mute tracking-widest leading-relaxed md:text-right">
+            <strong className="text-foreground font-medium">{t('colophonTitle')}</strong>
+            <br />
+            {t('colophonLine1')}
+            <br />
+            {t('colophonLine2')}
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-start justify-between gap-2 border-t border-border/40 pt-6 text-xs text-muted-foreground md:flex-row md:items-center">
-          <p>
-            © {year} {SITE.legalName}. {t('rights')}.
-          </p>
-          <div className="flex flex-wrap gap-x-4 gap-y-1">
-            <a
-              href="https://beian.miit.gov.cn"
-              target="_blank"
-              rel="noopener"
-              className="hover:text-foreground"
-            >
-              {SITE.icp}
-            </a>
+        {/* 4-column link grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+          <FooterCol title={t('products')}>
+            {productLinks.map((p) => (
+              <li key={p.slug}>
+                <a
+                  href={p.websiteUrl ?? p.repoUrl}
+                  className="footer-link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {locale === 'zh' ? p.nameZh : p.name}
+                </a>
+              </li>
+            ))}
+          </FooterCol>
+
+          <FooterCol title={t('company')}>
+            <li><IntlLink href="/about" className="footer-link">{t('about')}</IntlLink></li>
+            <li><a href={`mailto:${SITE.careersEmail}`} className="footer-link">{t('joinUs')}</a></li>
+            <li><IntlLink href="/contact" className="footer-link">{t('contact')}</IntlLink></li>
+          </FooterCol>
+
+          <FooterCol title={t('openSourceCol')}>
+            <li><a href="https://github.com/hitosea" target="_blank" rel="noopener" className="footer-link">{t('github')}</a></li>
+            <li><IntlLink href="/open-source" className="footer-link">{t('contribute')}</IntlLink></li>
+          </FooterCol>
+
+          <FooterCol title={t('contactCol')}>
+            <li><a href={`mailto:${SITE.email}`} className="footer-link">{SITE.email}</a></li>
+          </FooterCol>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="mt-14 pt-5 border-t border-rule flex flex-col md:flex-row md:items-center md:justify-between gap-3 font-mono text-[11px] text-mute">
+          <div>© {year} {SITE.legalName}. {t('rights')}.</div>
+          <div className="flex flex-wrap gap-x-5 gap-y-1">
+            <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener" className="hover:text-foreground">{SITE.icp}</a>
             {'gonganIcp' in SITE && SITE.gonganIcp && (
-              <a
-                href="https://www.beian.gov.cn"
-                target="_blank"
-                rel="noopener"
-                className="hover:text-foreground"
-              >
-                {SITE.gonganIcp}
-              </a>
+              <a href="https://www.beian.gov.cn" target="_blank" rel="noopener" className="hover:text-foreground">{SITE.gonganIcp}</a>
             )}
           </div>
         </div>
       </div>
     </footer>
+  )
+}
+
+function FooterCol({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <h5 className="font-mono text-[11px] tracking-[0.14em] uppercase text-ember mb-4 pb-3 border-b border-rule">
+        {title}
+      </h5>
+      <ul className="space-y-2.5">{children}</ul>
+    </div>
   )
 }

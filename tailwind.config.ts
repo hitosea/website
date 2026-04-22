@@ -10,7 +10,7 @@ const config: Config = {
     container: {
       center: true,
       padding: '1.5rem',
-      screens: { '2xl': '1400px' },
+      screens: { '2xl': '1280px' },
     },
     extend: {
       colors: {
@@ -50,12 +50,13 @@ const config: Config = {
       },
       borderRadius: {
         lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        md: 'calc(var(--radius))',
+        sm: 'calc(var(--radius))',
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui'],
         mono: ['var(--font-mono)', 'ui-monospace'],
+        serif: ['var(--font-serif)', 'Times New Roman', 'serif'],
       },
       keyframes: {
         'fade-up': {

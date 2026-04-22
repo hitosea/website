@@ -1,11 +1,10 @@
 import { useTranslations } from 'next-intl'
-import { GitBranch, Server, LayoutGrid, Code2 } from 'lucide-react'
 
 const ITEMS = [
-  { key: 'openSource', Icon: GitBranch, color: 'from-sky-500 to-blue-600' },
-  { key: 'enterprise', Icon: Server, color: 'from-violet-500 to-purple-600' },
-  { key: 'matrix', Icon: LayoutGrid, color: 'from-emerald-500 to-teal-600' },
-  { key: 'devFriendly', Icon: Code2, color: 'from-orange-500 to-amber-600' },
+  { key: 'openSource', roman: 'I.', accent: 'var(--ember)' },
+  { key: 'enterprise', roman: 'II.', accent: 'var(--ochre)' },
+  { key: 'matrix', roman: 'III.', accent: 'var(--teal)' },
+  { key: 'devFriendly', roman: 'IV.', accent: 'var(--plum)' },
 ] as const
 
 export function WhyUs() {
@@ -13,32 +12,67 @@ export function WhyUs() {
   const tItem = useTranslations('home.whyUs.items')
 
   return (
-    <section className="container py-20 md:py-32">
-      <div className="mb-14 max-w-2xl">
-        <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
+    <section className="relative py-24 md:py-32" id="about">
+      <div className="container">
+        {/* Section rule */}
+        <div className="border-t border-rule pt-7 mb-16 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+          <div className="section-label">{t('sectionId')}</div>
+          <div className="font-mono text-[11px] tracking-widest text-mute">{t('sectionMeta')}</div>
+        </div>
+
+        <h2
+          className="font-serif font-normal text-3xl md:text-5xl lg:text-7xl leading-[1.05] tracking-tight mb-7 max-w-[1100px] text-balance"
+          style={{ fontVariationSettings: '"opsz" 144, "SOFT" 40' }}
+        >
           {t('title')}
         </h2>
-      </div>
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-        {ITEMS.map(({ key, Icon, color }) => (
-          <div
-            key={key}
-            className="group relative rounded-2xl glass border border-border/40 p-7 transition-all duration-300 hover:border-primary/30 hover:-translate-y-1"
-          >
-            <div className="relative mb-5">
-              <div aria-hidden className={`absolute -inset-2 rounded-full bg-gradient-to-br ${color} opacity-20 blur-xl transition-opacity group-hover:opacity-40`} />
-              <div className={`relative flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${color}`}>
-                <Icon className="h-6 w-6 text-white" />
+        <p className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-[680px] mb-14">
+          {t('subtitle')}
+        </p>
+
+        {/* 2-column ticket grid */}
+        <div className="grid gap-6 md:grid-cols-2">
+          {ITEMS.map(({ key, roman, accent }, i) => (
+            <div
+              key={key}
+              className="relative border border-rule p-8 md:p-9 grid grid-cols-[48px_1fr] gap-6"
+              style={{ background: 'linear-gradient(180deg, rgba(243,238,228,0.015), transparent)' }}
+            >
+              {/* Left accent bar */}
+              <div
+                className="absolute top-0 left-0 w-1.5 h-full"
+                style={{ background: accent }}
+                aria-hidden
+              />
+
+              {/* Roman numeral */}
+              <div
+                className="font-serif text-4xl italic font-normal leading-none"
+                style={{ color: accent, fontVariationSettings: '"opsz" 144' }}
+              >
+                {roman}
+              </div>
+
+              {/* Content */}
+              <div>
+                <h4
+                  className="font-serif font-medium text-xl md:text-2xl mb-2.5 tracking-tight"
+                  style={{ fontVariationSettings: '"opsz" 72' }}
+                >
+                  {tItem(`${key}.title` as `${typeof key}.title`)}
+                </h4>
+                <p className="text-sm md:text-[14.5px] leading-relaxed text-foreground/78">
+                  {tItem(`${key}.desc` as `${typeof key}.desc`)}
+                </p>
+              </div>
+
+              {/* Top-right counter */}
+              <div className="absolute top-8 right-8 font-mono text-[10px] tracking-[0.15em] text-mute">
+                № 0{i + 1} / 04
               </div>
             </div>
-            <h3 className="text-lg font-semibold">
-              {tItem(`${key}.title` as `${typeof key}.title`)}
-            </h3>
-            <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">
-              {tItem(`${key}.desc` as `${typeof key}.desc`)}
-            </p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )
