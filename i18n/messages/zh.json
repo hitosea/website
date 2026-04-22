@@ -1,0 +1,12 @@
+{
+  "common": {
+    "bookDemo": "预约演示",
+    "contact": "联系",
+    "language": "语言"
+  },
+  "nav": {
+    "products": "产品",
+    "openSource": "开源",
+    "about": "关于"
+  }
+}

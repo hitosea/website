@@ -1,0 +1,12 @@
+{
+  "common": {
+    "bookDemo": "Book a demo",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "nav": {
+    "products": "Products",
+    "openSource": "Open Source",
+    "about": "About"
+  }
+}
