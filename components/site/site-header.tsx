@@ -21,7 +21,7 @@ export async function SiteHeader() {
             alt="Hitosea"
             width={120}
             height={32}
-            className="hidden h-10 w-auto dark:block"
+            className="hidden h-8 w-auto dark:block"
             priority
           />
           <Image
@@ -29,7 +29,7 @@ export async function SiteHeader() {
             alt="Hitosea"
             width={120}
             height={32}
-            className="block h-10 w-auto dark:hidden"
+            className="block h-8 w-auto dark:hidden"
             priority
           />
         </IntlLink>
