@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from 'next-intl'
 import { ArrowRight } from 'lucide-react'
 import { HeroStats } from './hero-stats'
 import { HeroIndexCard } from './hero-index-card'
+import { getIssueLine } from '@/lib/editorial-date'
 
 export function Hero() {
   const t = useTranslations('home.hero')
@@ -14,7 +15,7 @@ export function Hero() {
       <div className="container">
         {/* Top bar: Issue line + dateline */}
         <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between border-b border-rule pb-4 mb-10 md:mb-12 font-mono text-xs tracking-widest uppercase text-mute">
-          <div className="text-ember">{t('issueLine')}</div>
+          <div className="text-ember">{getIssueLine(locale)}</div>
           <div className="mt-1 sm:mt-0">
             {t('dateline')} · <span className="text-foreground">{t('datelineCity')}</span>
           </div>

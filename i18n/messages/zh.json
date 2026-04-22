@@ -72,7 +72,6 @@
     },
     "hero": {
       "eyebrow": "开源 · 产品矩阵 · 企业级",
-      "issueLine": "第 07 期 · 2026 年春",
       "dateline": "开源之洋季刊",
       "datelineCity": "上海",
       "titleLine1": "我们构建",
@@ -85,13 +84,11 @@
       "lede": "海豚有海是一间拥有三个方向和一个执拗信念的工作室 —— 我们相信最持久的软件是与社区一起构建的。从团队协作到自主编码再到垂直 AI，我们的产品套件以开源为核心，以生产级为边界。",
       "primaryCta": "预约演示",
       "secondaryCta": "浏览产品",
-      "indexTitle": "目录 · 本期内容",
-      "indexVersion": "v2026.04"
+      "indexTitle": "目录 · 本期内容"
     },
     "opensource": {
       "sectionId": "§ 03 · 开源之洋",
       "sectionMeta": "许可证: MIT / Apache-2.0 · 2019 年起公开",
-      "stampLabel": "GitHub Star 总数 — 2026 年 4 月",
       "stampDetail": "横跨 {repos}+ 个公开仓库 · {contributors}+ 位贡献者",
       "stampBadgeTop": "10+ 仓库",
       "stampBadgeBottom": "全部公开。",

@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import { getLocale } from 'next-intl/server'
 import { getFeaturedProducts } from '@/content/products'
 import { fetchAllProductStats } from '@/lib/github'
+import { getIndexVersion } from '@/lib/editorial-date'
 
 export async function HeroIndexCard() {
   const t = await getTranslations('home.hero')
@@ -32,7 +33,7 @@ export async function HeroIndexCard() {
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-rule bg-[rgba(229,106,63,0.08)] text-[11px] tracking-widest uppercase text-ember">
         <span>{'◉'} {t('indexTitle')}</span>
-        <span>{t('indexVersion')}</span>
+        <span>{getIndexVersion()}</span>
       </div>
       {/* Rows */}
       {rows.map((row, i) => (

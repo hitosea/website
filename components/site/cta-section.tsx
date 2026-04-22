@@ -1,9 +1,10 @@
 import { Link as IntlLink } from '@/i18n/routing'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { ArrowRight } from 'lucide-react'
 
 export function CTASection() {
   const t = useTranslations('home.cta')
+  const locale = useLocale()
 
   return (
     <section className="relative py-28 md:py-36 text-center" id="demo">
@@ -17,7 +18,10 @@ export function CTASection() {
         </div>
         <h2
           className="font-serif font-normal text-3xl md:text-5xl lg:text-7xl xl:text-[80px] leading-[1.06] tracking-tight mx-auto max-w-[1000px] text-balance mb-10"
-          style={{ fontVariationSettings: '"opsz" 144, "SOFT" 50' }}
+          style={{
+            fontVariationSettings: '"opsz" 144, "SOFT" 50',
+            lineHeight: locale === 'zh' ? 1.18 : 1.0,
+          }}
         >
           {t('title')}
         </h2>

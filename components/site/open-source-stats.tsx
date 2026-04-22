@@ -1,11 +1,13 @@
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, getLocale } from 'next-intl/server'
 import { ArrowRight } from 'lucide-react'
 import { Link as IntlLink } from '@/i18n/routing'
 import { fetchAllProductStats } from '@/lib/github'
 import { products } from '@/content/products'
+import { getStampLabel } from '@/lib/editorial-date'
 
 export async function OpenSourceStats() {
   const t = await getTranslations('home.opensource')
+  const locale = await getLocale()
   const repos = Array.from(new Set(products.filter((p) => p.githubRepo).map((p) => p.githubRepo!)))
   const { aggregate } = await fetchAllProductStats(repos)
 
@@ -38,7 +40,7 @@ export async function OpenSourceStats() {
               />
 
               <div className="font-mono text-[11px] tracking-[0.2em] uppercase text-ember mb-4">
-                {'☉'} {t('stampLabel')}
+                {'☉'} {getStampLabel(locale)}
               </div>
               <div
                 className="font-serif text-7xl md:text-9xl lg:text-[180px] leading-[0.85] tracking-tighter font-normal italic text-foreground"
@@ -71,8 +73,8 @@ export async function OpenSourceStats() {
           <div className="pt-6">
             <div className="section-label">{t('manifestoLabel')}</div>
             <h3
-              className="font-serif font-normal text-2xl md:text-4xl leading-tight tracking-tight mt-5 mb-5"
-              style={{ fontVariationSettings: '"opsz" 120, "SOFT" 50' }}
+              className="font-serif font-normal text-2xl md:text-4xl tracking-tight mt-5 mb-5"
+              style={{ fontVariationSettings: '"opsz" 120, "SOFT" 50', lineHeight: 1.4 }}
             >
               {renderManifestoTitle(t('manifestoTitle'), t('manifestoTitleAccent'))}
             </h3>

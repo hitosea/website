@@ -72,7 +72,6 @@
     },
     "hero": {
       "eyebrow": "Open source · Product suite · Enterprise-ready",
-      "issueLine": "Issue №07 · Spring 2026",
       "dateline": "The Open Ocean Quarterly",
       "datelineCity": "Shanghai",
       "titleLine1": "We build ",
@@ -85,13 +84,11 @@
       "lede": "Hitosea (海豚有海) is a studio of three bets and one stubborn belief — that the most durable software is built alongside its community. From team collaboration to agentic coding to vertical AI, our suite is open at the core and production-grade at the edges.",
       "primaryCta": "Book a Demo",
       "secondaryCta": "Explore Products",
-      "indexTitle": "Index · In this issue",
-      "indexVersion": "v2026.04"
+      "indexTitle": "Index · In this issue"
     },
     "opensource": {
       "sectionId": "§ 03 · The Open Ocean",
       "sectionMeta": "License: MIT / Apache-2.0 · Public since 2019",
-      "stampLabel": "Total GitHub Stars — April 2026",
       "stampDetail": "across {repos}+ public repositories · {contributors}+ contributors",
       "stampBadgeTop": "10+ repos",
       "stampBadgeBottom": "all public.",
