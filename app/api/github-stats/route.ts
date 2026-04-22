@@ -5,7 +5,7 @@ import { products } from '@/content/products'
 export const revalidate = 3600
 
 export async function GET() {
-  const repos = Array.from(new Set(products.map((p) => p.githubRepo)))
+  const repos = Array.from(new Set(products.filter((p) => p.githubRepo).map((p) => p.githubRepo!)))
   const { perRepo, aggregate } = await fetchAllProductStats(repos)
   return NextResponse.json(
     {

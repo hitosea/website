@@ -10,8 +10,10 @@ export interface Product {
   isFlagship?: boolean
   logoUrl: string
   websiteUrl?: string
-  githubRepo: string
-  githubUrl: string
+  githubRepo?: string
+  githubUrl?: string
+  giteeUrl?: string
+  repoUrl: string
   tags: string[]
   featured: boolean
 }
@@ -29,7 +31,21 @@ export const products: Product[] = [
     websiteUrl: 'https://www.dootask.com',
     githubRepo: 'kuaifan/dootask',
     githubUrl: 'https://github.com/kuaifan/dootask',
+    repoUrl: 'https://github.com/kuaifan/dootask',
     tags: ['Open Source', 'Self-hosted'],
+    featured: true,
+  },
+  {
+    slug: 'wookteam',
+    name: 'WookTeam',
+    nameZh: 'WookTeam',
+    tagline: 'Lightweight open-source team collaboration — docs, mind maps, flowcharts, Kanban, Gantt, IM.',
+    taglineZh: '轻量级开源在线团队协作工具：文档、思维导图、流程图、看板、甘特图、即时通讯。',
+    theme: 'collaboration',
+    logoUrl: '/logos/products/wookteam.svg',
+    giteeUrl: 'https://gitee.com/aipaw/wookteam',
+    repoUrl: 'https://gitee.com/aipaw/wookteam',
+    tags: ['Open Source', 'Lightweight', 'Self-hosted'],
     featured: true,
   },
   {
@@ -42,6 +58,7 @@ export const products: Product[] = [
     logoUrl: '/logos/products/dootask-okr.svg',
     githubRepo: 'hitosea/dootask-okr',
     githubUrl: 'https://github.com/hitosea/dootask-okr',
+    repoUrl: 'https://github.com/hitosea/dootask-okr',
     tags: ['Open Source', 'OKR'],
     featured: true,
   },
@@ -55,6 +72,7 @@ export const products: Product[] = [
     logoUrl: '/logos/products/dootask-ai.svg',
     githubRepo: 'kuaifan/dootask-ai',
     githubUrl: 'https://github.com/kuaifan/dootask-ai',
+    repoUrl: 'https://github.com/kuaifan/dootask-ai',
     tags: ['AI', 'Open Source'],
     featured: false,
   },
@@ -69,6 +87,7 @@ export const products: Product[] = [
     websiteUrl: 'https://happy-next.com',
     githubRepo: 'hitosea/happy-next',
     githubUrl: 'https://github.com/hitosea/happy-next',
+    repoUrl: 'https://github.com/hitosea/happy-next',
     tags: ['AI', 'Open Source', 'E2E Encrypted'],
     featured: true,
   },
@@ -83,6 +102,7 @@ export const products: Product[] = [
     websiteUrl: 'https://eeui.app',
     githubRepo: 'kuaifan/eeui',
     githubUrl: 'https://github.com/kuaifan/eeui',
+    repoUrl: 'https://github.com/kuaifan/eeui',
     tags: ['Framework', 'Open Source', 'Vue'],
     featured: true,
   },
@@ -96,6 +116,7 @@ export const products: Product[] = [
     logoUrl: '/logos/products/doopush.svg',
     githubRepo: 'doopush/doopush',
     githubUrl: 'https://github.com/doopush/doopush',
+    repoUrl: 'https://github.com/doopush/doopush',
     tags: ['Infrastructure', 'Open Source'],
     featured: true,
   },
@@ -109,6 +130,7 @@ export const products: Product[] = [
     logoUrl: '/logos/products/menuray.svg',
     githubRepo: 'menuray/menuray',
     githubUrl: 'https://github.com/menuray/menuray',
+    repoUrl: 'https://github.com/menuray/menuray',
     tags: ['AI', 'Open Source', 'Restaurant'],
     featured: true,
   },
@@ -122,6 +144,7 @@ export const products: Product[] = [
     logoUrl: '/logos/products/qiujian.svg',
     githubRepo: 'qiujian-club/qiujian',
     githubUrl: 'https://github.com/qiujian-club/qiujian',
+    repoUrl: 'https://github.com/qiujian-club/qiujian',
     tags: ['AI', 'Open Source', 'Sports'],
     featured: true,
   },
@@ -135,6 +158,7 @@ export const products: Product[] = [
     logoUrl: '/logos/products/ttpos.svg',
     githubRepo: 'hitosea/ttpos-server-go',
     githubUrl: 'https://github.com/hitosea/ttpos-server-go',
+    repoUrl: 'https://github.com/hitosea/ttpos-server-go',
     tags: ['Retail'],
     featured: false,
   },

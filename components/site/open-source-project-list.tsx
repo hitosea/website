@@ -20,14 +20,14 @@ function Github({ className }: { className?: string }) {
 }
 
 export async function OpenSourceProjectList() {
-  const repos = Array.from(new Set(products.map((p) => p.githubRepo)))
+  const repos = Array.from(new Set(products.filter((p) => p.githubRepo).map((p) => p.githubRepo!)))
   const { perRepo } = await fetchAllProductStats(repos)
   const starsByRepo = new Map(perRepo.map((r) => [r.repo, r.stars]))
 
   return (
     <div className="space-y-3">
       {products.map((p) => (
-        <ProjectRow key={p.slug} product={p} stars={starsByRepo.get(p.githubRepo) ?? 0} />
+        <ProjectRow key={p.slug} product={p} stars={p.githubRepo ? (starsByRepo.get(p.githubRepo) ?? 0) : 0} />
       ))}
     </div>
   )
@@ -40,7 +40,7 @@ function ProjectRow({ product, stars }: { product: Product; stars: number }) {
 
   return (
     <a
-      href={product.githubUrl}
+      href={product.repoUrl}
       target="_blank"
       rel="noopener"
       className="flex items-start gap-4 rounded-xl border border-border/60 bg-card/30 p-5 transition-colors hover:border-primary/50"
@@ -62,7 +62,7 @@ function ProjectRow({ product, stars }: { product: Product; stars: number }) {
         <p className="mt-1 text-sm text-muted-foreground">{tagline}</p>
         <p className="mt-2 flex items-center gap-4 text-xs text-muted-foreground">
           <span className="flex items-center gap-1">
-            <Github className="h-3.5 w-3.5" /> {product.githubRepo}
+            <Github className="h-3.5 w-3.5" /> {product.githubRepo ?? product.giteeUrl?.replace('https://gitee.com/', '') ?? ''}
           </span>
           <span>★ {stars.toLocaleString()}</span>
         </p>

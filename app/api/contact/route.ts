@@ -21,7 +21,11 @@ export async function POST(req: Request) {
   const result = await sendContactNotification(parsed.data)
 
   if (!result.ok) {
-    return NextResponse.json({ ok: false, error: 'notification failed' }, { status: 500 })
+    console.error('[contact] notification failed:', result.error)
+    return NextResponse.json(
+      { ok: false, error: result.error ?? 'notification failed' },
+      { status: 500 },
+    )
   }
 
   return NextResponse.json({ ok: true })

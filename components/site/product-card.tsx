@@ -30,8 +30,11 @@ export function ProductCard({
   const locale = useLocale()
   const name = locale === 'zh' ? product.nameZh : product.name
   const tagline = locale === 'zh' ? product.taglineZh : product.tagline
-  const primaryHref = product.websiteUrl ?? product.githubUrl
-  const primaryLabel = product.websiteUrl ? (locale === 'zh' ? '官网' : 'Website') : 'GitHub'
+  const primaryHref = product.websiteUrl ?? product.repoUrl
+  const isGitee = !!product.giteeUrl
+  const primaryLabel = product.websiteUrl
+    ? (locale === 'zh' ? '官网' : 'Website')
+    : isGitee ? 'Gitee' : 'GitHub'
 
   return (
     <Card className="group relative h-full overflow-hidden border-border/60 bg-card/50 transition-all hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
@@ -75,15 +78,17 @@ export function ProductCard({
             <span />
           )}
           <div className="flex items-center gap-3">
-            <a
-              href={product.githubUrl}
-              target="_blank"
-              rel="noopener"
-              className="text-muted-foreground hover:text-foreground"
-              aria-label={`${name} on GitHub`}
-            >
-              <Github className="h-4 w-4" />
-            </a>
+            {product.repoUrl && (
+              <a
+                href={product.repoUrl}
+                target="_blank"
+                rel="noopener"
+                className="text-muted-foreground hover:text-foreground"
+                aria-label={`${name} source`}
+              >
+                <Github className="h-4 w-4" />
+              </a>
+            )}
             <a
               href={primaryHref}
               target="_blank"

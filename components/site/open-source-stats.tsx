@@ -7,7 +7,7 @@ import { products } from '@/content/products'
 
 export async function OpenSourceStats() {
   const t = await getTranslations('home.opensource')
-  const repos = Array.from(new Set(products.map((p) => p.githubRepo)))
+  const repos = Array.from(new Set(products.filter((p) => p.githubRepo).map((p) => p.githubRepo!)))
   const { aggregate } = await fetchAllProductStats(repos)
 
   return (

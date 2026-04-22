@@ -8,7 +8,7 @@ const THEME_ORDER: ProductTheme[] = ['collaboration', 'ai-dev', 'vertical-ai']
 export async function ProductMatrix() {
   const groups = getProductsByTheme()
   const allRepos = THEME_ORDER.flatMap((theme) =>
-    groups[theme].filter((p) => p.featured).map((p) => p.githubRepo),
+    groups[theme].filter((p) => p.featured && p.githubRepo).map((p) => p.githubRepo!),
   )
   const { perRepo } = await fetchAllProductStats(allRepos)
   const starsByRepo = new Map(perRepo.map((r) => [r.repo, r.stars]))
@@ -54,7 +54,7 @@ function ProductThemeGroup({
       </h3>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {items.map((p) => (
-          <ProductCard key={p.slug} product={p} stars={starsByRepo.get(p.githubRepo)} />
+          <ProductCard key={p.slug} product={p} stars={p.githubRepo ? starsByRepo.get(p.githubRepo) : undefined} />
         ))}
       </div>
     </div>

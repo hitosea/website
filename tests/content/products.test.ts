@@ -36,9 +36,21 @@ describe('products metadata', () => {
     }
   })
 
-  it('every product has a githubRepo in owner/name format', () => {
+  it('every product has a repoUrl', () => {
     for (const p of products) {
-      expect(p.githubRepo).toMatch(/^[^/]+\/[^/]+$/)
+      expect(p.repoUrl).toMatch(/^https:\/\//)
     }
+  })
+
+  it('products with githubRepo have owner/name format', () => {
+    for (const p of products) {
+      if (p.githubRepo) {
+        expect(p.githubRepo).toMatch(/^[^/]+\/[^/]+$/)
+      }
+    }
+  })
+
+  it('contains wookteam', () => {
+    expect(products.map(p => p.slug)).toContain('wookteam')
   })
 })
