@@ -85,20 +85,26 @@ export async function SiteFooter() {
           <p>
             © {year} {SITE.legalName}. {t('rights')}.
           </p>
-          <p>
-            {SITE.icp ? (
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            <a
+              href="https://beian.miit.gov.cn"
+              target="_blank"
+              rel="noopener"
+              className="hover:text-foreground"
+            >
+              {SITE.icp}
+            </a>
+            {'gonganIcp' in SITE && SITE.gonganIcp && (
               <a
-                href="https://beian.miit.gov.cn"
+                href="https://www.beian.gov.cn"
                 target="_blank"
                 rel="noopener"
                 className="hover:text-foreground"
               >
-                {SITE.icp}
+                {SITE.gonganIcp}
               </a>
-            ) : (
-              <span>ICP 备案号 待更新</span>
             )}
-          </p>
+          </div>
         </div>
       </div>
     </footer>

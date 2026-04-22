@@ -16,15 +16,13 @@ describe('POST /api/contact', () => {
     expect(res.status).toBe(400)
   })
 
-  it('returns 200 when mailer reports ok', async () => {
-    vi.stubEnv('RESEND_API_KEY', 'test')
-    vi.stubEnv('CONTACT_EMAIL_FROM', 'from@x.com')
-    vi.stubEnv('CONTACT_EMAIL_TO', 'to@x.com')
+  it('returns 200 when DooTask bot reports ok', async () => {
+    vi.stubEnv('DOOTASK_BOT_TOKEN', 'test-token')
+    vi.stubEnv('DOOTASK_DIALOG_ID', '123')
 
     const mockSend = vi.fn().mockResolvedValue({ ok: true })
     vi.doMock('@/lib/mail', () => ({
-      sendContactEmail: mockSend,
-      sendFeishuNotification: vi.fn().mockResolvedValue(undefined),
+      sendContactNotification: mockSend,
     }))
     vi.resetModules()
     const { POST } = await import('@/app/api/contact/route')
@@ -48,14 +46,12 @@ describe('POST /api/contact', () => {
     expect(mockSend).toHaveBeenCalledOnce()
   })
 
-  it('returns 500 when mailer reports failure', async () => {
-    vi.stubEnv('RESEND_API_KEY', 'test')
-    vi.stubEnv('CONTACT_EMAIL_FROM', 'from@x.com')
-    vi.stubEnv('CONTACT_EMAIL_TO', 'to@x.com')
+  it('returns 500 when DooTask bot reports failure', async () => {
+    vi.stubEnv('DOOTASK_BOT_TOKEN', 'test-token')
+    vi.stubEnv('DOOTASK_DIALOG_ID', '123')
 
     vi.doMock('@/lib/mail', () => ({
-      sendContactEmail: vi.fn().mockResolvedValue({ ok: false, error: 'upstream error' }),
-      sendFeishuNotification: vi.fn().mockResolvedValue(undefined),
+      sendContactNotification: vi.fn().mockResolvedValue({ ok: false, error: 'upstream error' }),
     }))
     vi.resetModules()
     const { POST } = await import('@/app/api/contact/route')

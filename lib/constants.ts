@@ -4,11 +4,12 @@ export const SITE = {
   legalName: '广西海豚有海信息科技有限公司',
   domain: 'hitosea.com',
   url: 'https://hitosea.com',
-  email: 'contact@hitosea.com',
-  salesEmail: 'sales@hitosea.com',
-  careersEmail: 'careers@hitosea.com',
+  email: 'service@hitosea.com',
+  salesEmail: 'service@hitosea.com',
+  careersEmail: 'service@hitosea.com',
   phone: '',
-  icp: '',
+  icp: '桂ICP备2021003642号-1',
+  gonganIcp: '桂公网安备45010802000317号',
   founded: 2020,
 } as const
 
