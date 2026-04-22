@@ -102,5 +102,33 @@
     "joinTitle": "Join us",
     "joinBody": "If you believe in open source and love shipping products, we'd like to meet you. Send your résumé to:",
     "joinCta": "Send résumé"
+  },
+  "contact": {
+    "heroTitle": "Book a demo / Contact us",
+    "heroLede": "Want to explore self-hosted deployment, custom development, or partnerships? Leave your info and we'll get back within one business day.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "company": "Company",
+      "companyPlaceholder": "Company name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone (optional)",
+      "phonePlaceholder": "+1 ...",
+      "products": "Products of interest",
+      "productsPlaceholder": "Select one or more",
+      "message": "Your needs",
+      "messagePlaceholder": "Team size, use cases, target deployment timeline, etc.",
+      "submit": "Submit",
+      "submitting": "Submitting…",
+      "success": "Got it — we'll reach out soon!",
+      "errorGeneric": "Submission failed. Please retry or email us directly."
+    },
+    "otherTitle": "Other ways to reach us",
+    "otherEmail": "Business email",
+    "otherWeChat": "WeChat",
+    "otherWeChatDesc": "Weekdays 9:00–18:00",
+    "otherAddress": "Office",
+    "otherAddressValue": "Guangxi, China"
   }
 }

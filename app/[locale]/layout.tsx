@@ -8,6 +8,7 @@ import { routing } from '@/i18n/routing'
 import { ThemeProvider } from '@/components/theme-provider'
 import { SiteHeader } from '@/components/site/site-header'
 import { SiteFooter } from '@/components/site/site-footer'
+import { Toaster } from '@/components/ui/sonner'
 import '../globals.css'
 
 const inter = Inter({
@@ -41,6 +42,7 @@ export default async function LocaleLayout({
             <SiteHeader />
             <div className="flex-1">{children}</div>
             <SiteFooter />
+            <Toaster position="top-center" richColors />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

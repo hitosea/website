@@ -102,5 +102,33 @@
     "joinTitle": "加入我们",
     "joinBody": "如果你认同开源、热爱构建产品，我们想认识你。把简历发到：",
     "joinCta": "发送简历"
+  },
+  "contact": {
+    "heroTitle": "预约演示 / 联系我们",
+    "heroLede": "想了解私有化部署、定制开发、或商务合作？留下联系方式，我们会在一个工作日内回复。",
+    "form": {
+      "name": "姓名",
+      "namePlaceholder": "你的姓名",
+      "company": "公司",
+      "companyPlaceholder": "公司名称",
+      "email": "邮箱",
+      "emailPlaceholder": "your@email.com",
+      "phone": "电话（可选）",
+      "phonePlaceholder": "+86 ...",
+      "products": "感兴趣的产品",
+      "productsPlaceholder": "可多选",
+      "message": "需求说明",
+      "messagePlaceholder": "团队规模、使用场景、希望何时部署等",
+      "submit": "提交",
+      "submitting": "提交中...",
+      "success": "已收到，我们会尽快联系你！",
+      "errorGeneric": "提交失败，请稍后重试或直接发邮件给我们。"
+    },
+    "otherTitle": "其他联系方式",
+    "otherEmail": "商务邮箱",
+    "otherWeChat": "微信",
+    "otherWeChatDesc": "工作日 9:00-18:00",
+    "otherAddress": "办公地点",
+    "otherAddressValue": "广西"
   }
 }
