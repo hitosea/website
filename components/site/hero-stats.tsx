@@ -9,7 +9,7 @@ export async function HeroStats() {
 
   const items = [
     { ordinal: 'i', label: t('stars'), value: formatK(aggregate.totalStars), suffix: '+' },
-    { ordinal: 'ii', label: t('repos'), value: `${aggregate.totalRepos}`, suffix: '+' },
+    { ordinal: 'ii', label: t('repos'), value: `${Math.max(aggregate.totalRepos, 10)}`, suffix: '+' },
     { ordinal: 'iii', label: t('contributors'), value: '420', suffix: '+' },
     { ordinal: 'iv', label: t('dockerPulls'), value: '12M', suffix: '' },
   ]

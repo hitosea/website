@@ -51,7 +51,7 @@ export async function OpenSourceStats() {
                 </em>+
               </div>
               <div className="font-mono text-xs text-mute mt-4 border-t border-rule pt-3.5">
-                {'★★★★★'} {t('stampDetail', { repos: aggregate.totalRepos, contributors: '420' })}
+                {'★★★★★'} {t('stampDetail', { repos: Math.max(aggregate.totalRepos, 10), contributors: '420' })}
               </div>
             </div>
 
