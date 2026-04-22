@@ -1,12 +1,13 @@
 import { Suspense } from 'react'
 import { Link as IntlLink } from '@/i18n/routing'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { ArrowRight } from 'lucide-react'
 import { HeroStats } from './hero-stats'
 import { HeroIndexCard } from './hero-index-card'
 
 export function Hero() {
   const t = useTranslations('home.hero')
+  const locale = useLocale()
 
   return (
     <section className="relative py-16 md:py-20">
@@ -20,7 +21,14 @@ export function Hero() {
         </div>
 
         {/* Hero title — large Fraunces display */}
-        <h1 className="font-serif font-normal text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.08] tracking-[-0.03em] mb-8 md:mb-10 text-balance" style={{ fontVariationSettings: '"opsz" 144, "SOFT" 30' }}>
+        <h1
+          className={`font-serif font-normal leading-[1.08] tracking-[-0.03em] mb-8 md:mb-10 text-balance ${
+            locale === 'zh'
+              ? 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl'
+              : 'text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[112px] leading-[1.0] tracking-[-0.04em]'
+          }`}
+          style={{ fontVariationSettings: '"opsz" 144, "SOFT" 30' }}
+        >
           {t('titleLine1')}
           <em className="not-italic text-ember" style={{ fontVariationSettings: '"opsz" 144, "SOFT" 80' }}>
             {t('titleAccent1')}
