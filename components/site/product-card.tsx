@@ -37,8 +37,10 @@ export function ProductCard({
     : isGitee ? 'Gitee' : 'GitHub'
 
   return (
-    <Card className="group relative h-full overflow-hidden border-border/60 bg-card/50 transition-all hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-      <CardContent className="flex h-full flex-col gap-4 p-6">
+    <Card className="group relative h-full overflow-hidden glass border-border/40 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40 hover:glow-primary">
+      {/* Hover gradient accent */}
+      <div aria-hidden className="pointer-events-none absolute -inset-px rounded-[inherit] bg-gradient-to-br from-primary/10 via-transparent to-purple-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      <CardContent className="relative flex h-full flex-col gap-4 p-6">
         <div className="flex items-start justify-between">
           <div className="relative h-10 w-10 shrink-0">
             <Image

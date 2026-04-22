@@ -13,11 +13,11 @@ export async function StatsStrip() {
   ]
 
   return (
-    <div className="mt-10 flex flex-wrap gap-8 text-sm md:gap-12">
+    <div className="mt-14 flex flex-wrap gap-10 text-sm md:gap-16">
       {items.map((item) => (
-        <div key={item.label}>
-          <div className="font-mono text-2xl font-semibold text-foreground">{item.value}</div>
-          <div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
+        <div key={item.label} className="relative">
+          <div className="font-mono text-3xl font-bold text-gradient md:text-4xl">{item.value}</div>
+          <div className="mt-1.5 text-xs uppercase tracking-widest text-muted-foreground">
             {item.label}
           </div>
         </div>

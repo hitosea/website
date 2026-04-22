@@ -11,7 +11,7 @@ export async function OpenSourceStats() {
   const { aggregate } = await fetchAllProductStats(repos)
 
   return (
-    <section className="container border-y border-border/40 py-16 md:py-24">
+    <section className="container py-20 md:py-32">
       <div className="grid gap-12 md:grid-cols-[1.2fr,1fr] md:items-center">
         <div>
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">{t('title')}</h2>
@@ -41,9 +41,9 @@ export async function OpenSourceStats() {
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
-    <div className="rounded-xl border border-border/60 bg-card/30 p-6">
-      <div className="font-mono text-4xl font-semibold">{value}</div>
-      <div className="mt-1 text-sm text-muted-foreground">{label}</div>
+    <div className="glass rounded-2xl border border-border/40 p-7">
+      <div className="font-mono text-4xl font-bold text-gradient md:text-5xl">{value}</div>
+      <div className="mt-2 text-sm text-muted-foreground">{label}</div>
     </div>
   )
 }

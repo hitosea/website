@@ -8,25 +8,26 @@ export function CTASection() {
   const t = useTranslations('home.cta')
 
   return (
-    <section className="relative overflow-hidden border-t border-border/40">
-      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.12]">
-        <div className="absolute left-1/2 top-1/2 h-[32rem] w-[32rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary blur-[128px]" />
+    <section className="relative overflow-hidden">
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        <div className="absolute left-1/4 top-0 h-[500px] w-[500px] rounded-full bg-primary/20 blur-[150px]" />
+        <div className="absolute right-1/4 bottom-0 h-[400px] w-[400px] rounded-full bg-purple-500/15 blur-[130px]" />
       </div>
-      <div className="container relative py-20 text-center md:py-28">
-        <h2 className="mx-auto max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
+      <div className="container relative py-24 text-center md:py-36">
+        <h2 className="mx-auto max-w-3xl text-3xl font-bold tracking-tight md:text-5xl">
           {t('title')}
         </h2>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <Button asChild size="lg">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <Button asChild size="lg" className="glow-primary-lg px-10 text-base">
             <IntlLink href="/contact">
               {t('primary')} <ArrowRight className="ml-2 h-4 w-4" />
             </IntlLink>
           </Button>
-          <Button asChild size="lg" variant="outline">
+          <Button asChild size="lg" variant="outline" className="px-10 text-base border-border/60 hover:border-primary/40">
             <IntlLink href="/contact#wechat">{t('secondary')}</IntlLink>
           </Button>
         </div>
-        <p className="mt-6 text-sm text-muted-foreground">
+        <p className="mt-8 text-sm text-muted-foreground">
           {t('emailHint')}{' '}
           <a href={`mailto:${SITE.email}`} className="text-primary hover:underline">
             {SITE.email}
