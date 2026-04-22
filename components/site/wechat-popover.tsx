@@ -19,7 +19,7 @@ export function WeChatPopover() {
         <p className="mb-2 text-sm font-medium">{t('wechatTitle')}</p>
         <div className="relative mx-auto h-40 w-40 bg-muted">
           <Image
-            src="/brand/wechat-qr.svg"
+            src="/brand/wechat-qr.png"
             alt="WeChat QR"
             fill
             className="object-contain"

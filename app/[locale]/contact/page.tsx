@@ -31,7 +31,7 @@ export default function ContactPage() {
             <div className="mt-2 flex items-start gap-4">
               <div className="relative h-32 w-32 shrink-0">
                 <Image
-                  src="/brand/wechat-qr.svg"
+                  src="/brand/wechat-qr.png"
                   alt="WeChat QR"
                   fill
                   className="object-contain"
