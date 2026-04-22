@@ -10,5 +10,20 @@
     "products": "Products",
     "openSource": "Open Source",
     "about": "About"
+  },
+  "footer": {
+    "tagline": "A developer-first open-source product company.",
+    "products": "Products",
+    "company": "Company",
+    "openSourceCol": "Open Source",
+    "contactCol": "Contact",
+    "about": "About",
+    "joinUs": "Join us",
+    "contact": "Contact",
+    "github": "GitHub org",
+    "contribute": "Contributing guide",
+    "email": "Email",
+    "wechat": "WeChat",
+    "rights": "All rights reserved"
   }
 }

@@ -10,5 +10,20 @@
     "products": "产品",
     "openSource": "开源",
     "about": "关于"
+  },
+  "footer": {
+    "tagline": "Developer-first 的开源产品公司",
+    "products": "产品",
+    "company": "公司",
+    "openSourceCol": "开源",
+    "contactCol": "联系",
+    "about": "关于我们",
+    "joinUs": "加入我们",
+    "contact": "联系我们",
+    "github": "GitHub 组织",
+    "contribute": "贡献指南",
+    "email": "邮箱",
+    "wechat": "微信",
+    "rights": "保留所有权利"
   }
 }
