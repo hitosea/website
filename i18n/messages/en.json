@@ -90,5 +90,17 @@
     "communityWeChat": "WeChat group (add our bot to request an invite)",
     "contributeTitle": "Contribute",
     "contributeDesc": "Each repo includes a CONTRIBUTING.md with issue, development, and PR instructions."
+  },
+  "about": {
+    "heroTitle": "We are Hitosea",
+    "heroLede": "A group of engineers who believe open source can change enterprise software.",
+    "missionTitle": "Our mission",
+    "missionBody": "Use open-source, modular products to help teams spend their energy on what truly creates value — not building infrastructure, but shipping better products and serving more customers.",
+    "doTitle": "What we're doing",
+    "doBody": "We build three product lines that reinforce each other: enterprise collaboration (centered on DooTask), AI & developer tools (Happy Next, eeui, DooPush), and vertical AI products (MenuRay, Qiujian, TTPOS). Every product is open-source, self-hostable, and enterprise-ready.",
+    "timelineTitle": "Timeline",
+    "joinTitle": "Join us",
+    "joinBody": "If you believe in open source and love shipping products, we'd like to meet you. Send your résumé to:",
+    "joinCta": "Send résumé"
   }
 }

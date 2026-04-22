@@ -90,5 +90,17 @@
     "communityWeChat": "微信群（添加小助手邀请入群）",
     "contributeTitle": "参与贡献",
     "contributeDesc": "每个仓库都有 CONTRIBUTING.md，说明如何提 issue、开发、提 PR。"
+  },
+  "about": {
+    "heroTitle": "我们是海豚有海",
+    "heroLede": "一群相信开源可以改变企业软件的工程师。",
+    "missionTitle": "我们的使命",
+    "missionBody": "用开源、模块化的产品帮助团队把精力花在真正创造价值的事情上 —— 不是搭建基础设施，而是构建更好的产品、服务更多客户。",
+    "doTitle": "我们在做什么",
+    "doBody": "我们构建三条相互支撑的产品线：企业协作（以 DooTask 为核心）、AI 与开发者工具（Happy Next、eeui、DooPush），以及面向行业的 AI 产品（MenuRay、球见、TTPOS）。每一款产品都开源，可私有化部署，为企业级场景准备。",
+    "timelineTitle": "发展历程",
+    "joinTitle": "加入我们",
+    "joinBody": "如果你认同开源、热爱构建产品，我们想认识你。把简历发到：",
+    "joinCta": "发送简历"
   }
 }
