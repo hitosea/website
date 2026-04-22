@@ -1,10 +1,18 @@
 import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import { GeistMono } from 'geist/font/mono'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import { ThemeProvider } from '@/components/theme-provider'
 import '../globals.css'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: '海豚有海 Hitosea',
@@ -24,7 +32,7 @@ export default async function LocaleLayout({
   const messages = await getMessages()
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning className={`${inter.variable} ${GeistMono.variable}`}>
       <body className="min-h-screen bg-background text-foreground antialiased">
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
