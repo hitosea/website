@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# hitosea.com
 
-## Getting Started
+Official website of 广西海豚有海信息科技有限公司 (Hitosea).
 
-First, run the development server:
+## Tech stack
+
+- Next.js 15 (App Router) + TypeScript
+- Tailwind CSS 3.4 + shadcn/ui
+- next-intl (zh / en)
+- next-themes (dark default)
+- Resend (contact form email)
+- Vitest + Testing Library
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+cp .env.example .env.local
+# Fill in RESEND_API_KEY and other optional vars
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit http://localhost:3000 (redirects to /zh).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `pnpm dev` — local dev server
+- `pnpm build` — production build
+- `pnpm start` — run production build
+- `pnpm test` — run unit tests
+- `pnpm lint` — ESLint
 
-## Learn More
+## Changing content
 
-To learn more about Next.js, take a look at the following resources:
+| What | Where |
+|---|---|
+| Products (name, tagline, link) | `content/products.ts` |
+| Company timeline | `content/company.ts` |
+| Site copy (zh/en) | `i18n/messages/zh.json`, `i18n/messages/en.json` |
+| Brand color | `app/globals.css` — `--primary` HSL variable |
+| Logo | `public/brand/` |
+| Product logos | `public/logos/products/` |
+| Site constants (emails, ICP) | `lib/constants.ts` |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Recommended:** Vercel. The project is a standard Next.js app with no special build flags.
 
-## Deploy on Vercel
+Required env vars:
+- `RESEND_API_KEY` — Resend API key for contact form emails
+- `CONTACT_EMAIL_FROM` — verified Resend sender (e.g. `noreply@hitosea.com`)
+- `CONTACT_EMAIL_TO` — destination for form submissions (e.g. `contact@hitosea.com`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Optional:
+- `FEISHU_WEBHOOK_URL` — if set, pings Feishu/Lark on each form submission
+- `GITHUB_TOKEN` — bumps GitHub API rate limit for the stats strip (60 → 5000/hr)
+- `NEXT_PUBLIC_SITE_URL` — full URL; defaults to `https://hitosea.com`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Architecture
+
+```
+app/[locale]/       # zh and en routes
+app/api/            # contact + github-stats routes
+components/ui/      # shadcn primitives
+components/site/    # page-specific components
+content/            # products and timeline data (TS)
+i18n/               # locale config + messages
+lib/                # helpers (github, mail, schema, constants)
+tests/              # Vitest unit tests
+```
+
+Design spec: `docs/superpowers/specs/2026-04-22-hitosea-website-design.md`
