@@ -41,6 +41,39 @@
       "lede": "海豚有海是一家 Developer-first 的开源产品公司。我们的产品被数千个团队和开发者信赖使用。",
       "primaryCta": "预约演示",
       "secondaryCta": "浏览产品矩阵"
+    },
+    "opensource": {
+      "title": "我们相信开源",
+      "lede": "海豚有海的所有核心产品都开源。从 DooTask 到 MenuRay，我们相信可审计、可自部署、可定制的软件是企业未来的基础。",
+      "viewProjects": "查看开源项目",
+      "viewGithub": "前往 GitHub 组织"
+    },
+    "whyUs": {
+      "title": "为什么选海豚有海",
+      "items": {
+        "openSource": {
+          "title": "全线开源",
+          "desc": "所有核心产品开源，可审计、可自部署、可定制。"
+        },
+        "enterprise": {
+          "title": "企业私有化",
+          "desc": "提供生产级私有化部署、安全合规支持和 SLA。"
+        },
+        "matrix": {
+          "title": "产品矩阵",
+          "desc": "从团队协作到 AI 工作空间到垂直 SaaS，一家公司满足多场景。"
+        },
+        "devFriendly": {
+          "title": "开发者友好",
+          "desc": "完整的开源文档、丰富的 API 和 SDK、活跃的社区。"
+        }
+      }
+    },
+    "cta": {
+      "title": "准备为你的团队接入海豚有海的产品了吗？",
+      "primary": "预约演示",
+      "secondary": "加微信聊聊",
+      "emailHint": "或直接发邮件："
     }
   },
   "stats": {

@@ -1,10 +1,9 @@
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import { fetchAllProductStats } from '@/lib/github'
 import { products } from '@/content/products'
 
 export async function StatsStrip() {
-  // eslint-disable-next-line react-hooks/rules-of-hooks -- next-intl supports useTranslations in server components
-  const t = useTranslations('stats')
+  const t = await getTranslations('stats')
   const repos = Array.from(new Set(products.map((p) => p.githubRepo)))
   const { aggregate } = await fetchAllProductStats(repos)
 

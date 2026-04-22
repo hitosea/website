@@ -41,6 +41,39 @@
       "lede": "Hitosea is a developer-first open-source product company. Our products are trusted by thousands of teams and developers.",
       "primaryCta": "Book a demo",
       "secondaryCta": "Explore our products"
+    },
+    "opensource": {
+      "title": "We believe in open source",
+      "lede": "Every core product at Hitosea is open source. From DooTask to MenuRay, we believe auditable, self-hostable, customizable software is the future of enterprise software.",
+      "viewProjects": "View open-source projects",
+      "viewGithub": "Go to our GitHub org"
+    },
+    "whyUs": {
+      "title": "Why Hitosea",
+      "items": {
+        "openSource": {
+          "title": "Fully open-source",
+          "desc": "All our core products are open source — auditable, self-hostable, customizable."
+        },
+        "enterprise": {
+          "title": "Enterprise-ready",
+          "desc": "Production-grade self-hosted deployments, compliance, and SLA support."
+        },
+        "matrix": {
+          "title": "Product suite",
+          "desc": "From team collaboration to AI workspace to vertical SaaS — one vendor, many scenarios."
+        },
+        "devFriendly": {
+          "title": "Developer-first",
+          "desc": "Solid open-source docs, rich APIs and SDKs, active community."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to bring Hitosea products to your team?",
+      "primary": "Book a demo",
+      "secondary": "Chat on WeChat",
+      "emailHint": "Or just email us:"
     }
   },
   "stats": {
