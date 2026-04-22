@@ -12,7 +12,7 @@ export async function SiteHeader() {
   const tc = await getTranslations('common')
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-rule backdrop-blur-[10px] bg-[rgba(12,12,14,0.75)] dark:bg-[rgba(12,12,14,0.75)]" style={{ background: 'rgba(var(--bg-rgb, 12,12,14), 0.75)' }}>
+    <header className="sticky top-0 z-50 w-full border-b border-rule backdrop-blur-[10px] bg-[rgba(243,238,228,0.85)] dark:bg-[rgba(12,12,14,0.75)]">
       <div className="container flex h-[72px] items-center justify-between gap-6">
         {/* Brand */}
         <IntlLink href="/" className="flex items-center gap-3 no-underline">
