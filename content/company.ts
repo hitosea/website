@@ -8,11 +8,11 @@ export interface TimelineEvent {
 
 export const timeline: TimelineEvent[] = [
   {
-    date: '2020',
-    title: 'DooTask open-sourced',
-    titleZh: 'DooTask 开源',
-    desc: 'Our flagship team collaboration platform goes public on GitHub.',
-    descZh: '旗舰协作平台 DooTask 在 GitHub 公开发布。',
+    date: '2019',
+    title: 'Company founded & DooTask open-sourced',
+    titleZh: '公司成立 & DooTask 开源',
+    desc: 'Hitosea is founded in Guangxi. Our flagship team collaboration platform goes public on GitHub.',
+    descZh: '海豚有海在广西成立，旗舰协作平台 DooTask 在 GitHub 公开发布。',
   },
   {
     date: '2021',

@@ -29,6 +29,7 @@
     "brandGuide": "Brand guide",
     "statusPage": "Status page",
     "quarterly": "Quarterly",
+    "phone": "Tel",
     "email": "Email",
     "wechat": "WeChat",
     "rights": "All rights reserved",
@@ -40,7 +41,7 @@
     "colophonTitle": "Hitosea · The Open Ocean Quarterly"
   },
   "home": {
-    "matrixTitle": "Nine products, three bets, one engine.",
+    "matrixTitle": "Three bets, one engine.",
     "matrixSubtitle": "We cluster our products into three coherent groups — each addressing a distinct layer of modern work — and sharpen every one with the same platform team.",
     "matrixSectionId": "§ 02 · The Product Matrix",
     "matrixMeta": "09 products · 03 groups · 01 engine",
@@ -81,7 +82,7 @@
       "titleLine3": " the people who make, ship, ",
       "titleAccent2": "ship again",
       "titleEnd": ".",
-      "lede": "Hitosea (海豚有海) is a studio of ten products, three bets, and one stubborn belief — that the most durable software is built alongside its community. From team collaboration to agentic coding to vertical AI, our suite is open at the core and production-grade at the edges.",
+      "lede": "Hitosea (海豚有海) is a studio of three bets and one stubborn belief — that the most durable software is built alongside its community. From team collaboration to agentic coding to vertical AI, our suite is open at the core and production-grade at the edges.",
       "primaryCta": "Book a Demo",
       "secondaryCta": "Explore Products",
       "indexTitle": "Index · In this issue",
@@ -130,7 +131,7 @@
         "matrix": {
           "title": "A Product Suite",
           "titleAccent": "Suite",
-          "desc": "Nine products, one design language, one identity layer. Adopt one to start — integrate the rest when you are ready. No forced platforms.",
+          "desc": "One design language, one identity layer. Adopt one to start — integrate the rest when you are ready. No forced platforms.",
           "roman": "III.",
           "perf": "03"
         },

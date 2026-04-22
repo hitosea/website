@@ -7,10 +7,10 @@ export const SITE = {
   email: 'service@hitosea.com',
   salesEmail: 'service@hitosea.com',
   careersEmail: 'service@hitosea.com',
-  phone: '',
+  phone: '0771-3164099',
   icp: '桂ICP备2021003642号-1',
   gonganIcp: '桂公网安备45010802000317号',
-  founded: 2020,
+  founded: 2019,
 } as const
 
 export const GITHUB_ORGS = [

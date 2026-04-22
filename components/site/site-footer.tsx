@@ -69,6 +69,7 @@ export async function SiteFooter() {
           </FooterCol>
 
           <FooterCol title={t('contactCol')}>
+            <li><a href={`tel:${SITE.phone}`} className="footer-link">{t('phone')}: {SITE.phone}</a></li>
             <li><a href={`mailto:${SITE.email}`} className="footer-link">{SITE.email}</a></li>
           </FooterCol>
         </div>

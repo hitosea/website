@@ -140,7 +140,7 @@ function ProductGroup({
                 >
                   {name}
                 </div>
-                <div className="text-xs text-mute mt-0.5 max-w-[260px] leading-snug line-clamp-2">
+                <div className="text-xs text-mute mt-0.5 max-w-[260px] leading-snug line-clamp-2 min-h-[2.75em]">
                   {tagline}
                 </div>
               </div>

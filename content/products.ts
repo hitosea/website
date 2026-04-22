@@ -93,8 +93,8 @@ export const products: Product[] = [
   },
   {
     slug: 'eeui',
-    name: 'eeui',
-    nameZh: 'eeui',
+    name: 'EEUI',
+    nameZh: 'EEUI',
     tagline: 'Build high-quality native (iOS/Android) apps with Vue.js.',
     taglineZh: '用 Vue.js 开发高质量原生（Android/iOS）应用的跨端框架。',
     theme: 'ai-dev',
@@ -156,11 +156,11 @@ export const products: Product[] = [
     taglineZh: '面向零售的 POS 系统（Go + Flutter）。',
     theme: 'vertical-ai',
     logoUrl: '/logos/products/ttpos.svg',
-    githubRepo: 'hitosea/ttpos-server-go',
-    githubUrl: 'https://github.com/hitosea/ttpos-server-go',
-    repoUrl: 'https://github.com/hitosea/ttpos-server-go',
-    tags: ['Retail'],
-    featured: false,
+    githubRepo: 'hitosea/ttpos-flutter',
+    githubUrl: 'https://github.com/hitosea/ttpos-flutter',
+    repoUrl: 'https://github.com/hitosea/ttpos-flutter',
+    tags: ['Retail', 'Open Source'],
+    featured: true,
   },
 ]
 
