@@ -1,5 +1,7 @@
 import { Link as IntlLink } from '@/i18n/routing'
 import { Button } from '@/components/ui/button'
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import { Menu } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
 import { LanguageSwitch } from './language-switch'
 import { ThemeToggle } from './theme-toggle'
@@ -39,6 +41,21 @@ export async function SiteHeader() {
           <Button asChild size="sm" className="hidden sm:inline-flex">
             <IntlLink href="/contact">{tc('bookDemo')}</IntlLink>
           </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden" aria-label="Open menu">
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-72">
+              <nav className="mt-8 flex flex-col gap-4 text-lg">
+                <IntlLink href="/#products">{t('products')}</IntlLink>
+                <IntlLink href="/open-source">{t('openSource')}</IntlLink>
+                <IntlLink href="/about">{t('about')}</IntlLink>
+                <IntlLink href="/contact">{tc('bookDemo')}</IntlLink>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
