@@ -76,7 +76,7 @@ export async function SiteFooter() {
 
         {/* Bottom bar */}
         <div className="mt-14 pt-5 border-t border-rule flex flex-col md:flex-row md:items-center md:justify-between gap-3 font-mono text-[11px] text-mute">
-          <div>© {year} {SITE.legalName}. {t('rights')}.</div>
+          <div>© {year} {locale === 'zh' ? SITE.legalName : SITE.legalNameEn}. {t('rights')}.</div>
           <div className="flex flex-wrap gap-x-5 gap-y-1">
             <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener" className="hover:text-foreground">{SITE.icp}</a>
             {'gonganIcp' in SITE && SITE.gonganIcp && (

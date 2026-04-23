@@ -2,6 +2,7 @@ export const SITE = {
   name: 'Hitosea',
   nameZh: '海豚有海',
   legalName: '广西海豚有海信息科技有限公司',
+  legalNameEn: 'Guangxi Hitosea Information Technology Co., Ltd',
   domain: 'hitosea.com',
   url: 'https://hitosea.com',
   email: 'service@hitosea.com',

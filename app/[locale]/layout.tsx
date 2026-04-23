@@ -43,7 +43,7 @@ export async function generateMetadata({
       default: isZh
         ? `${SITE.nameZh} | Developer-first 的开源产品公司`
         : `${SITE.name} | Developer-first open-source product company`,
-      template: `%s · ${SITE.nameZh}`,
+      template: `%s · ${isZh ? SITE.nameZh : SITE.name}`,
     },
     description: isZh
       ? '海豚有海构建团队协作、AI、开发者工具与行业 SaaS 的开源产品矩阵。'
@@ -52,7 +52,7 @@ export async function generateMetadata({
       type: 'website',
       locale: isZh ? 'zh_CN' : 'en_US',
       url: `${SITE.url}/${locale}`,
-      siteName: SITE.nameZh,
+      siteName: isZh ? SITE.nameZh : SITE.name,
       images: [{ url: '/og/default.svg', width: 1200, height: 630 }],
     },
     twitter: {
