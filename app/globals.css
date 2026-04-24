@@ -154,7 +154,7 @@
   }
   .btn-editorial-ghost:hover {
     background: var(--paper);
-    color: var(--ink);
+    color: var(--bg);
   }
 
   /* ---------- Footer links ---------- */
